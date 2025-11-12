@@ -19,10 +19,22 @@ header {
 }
 
 footer {
-  background-color: purple;
+  background-color: darkslateblue;
   color: white;
-  text-align: center;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+footer address {
+  margin-bottom: 10px;
 }
 
 main {
