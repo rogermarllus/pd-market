@@ -36,11 +36,34 @@ main {
 }
 
 nav {
-  background-color: lightgreen;
+  background-color: #eee;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   grid-column: 1 / 2;
   grid-row: 1 / 8;
-  padding: 10px;
-  text-align: center;
+  padding: 20px;
+}
+
+h4 {
+  color: darkslategray;
+  font-size: 1.2rem;
+}
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+nav a {
+  color: darkcyan;
+  text-decoration: none;
 }
 
 aside {
