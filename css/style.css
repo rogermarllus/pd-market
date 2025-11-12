@@ -44,11 +44,64 @@ nav {
 }
 
 aside {
-  background-color: lightseagreen;
+  background-color: #eee;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   grid-column: 3 / 4;
   grid-row: 1 / 8;
-  padding: 10px;
-  text-align: center;
+  padding: 20px;
+}
+
+aside article {
+  text-align: justify;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: darkslategray;
+}
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  color: darkslategray;
+  margin-bottom: 5px;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+details {
+  margin-top: 10px;
+}
+
+details p {
+  color: #555;
+  margin-top: 5px;
+}
+
+summary {
+  color: darkcyan;
+  font-weight: bold;
+}
+
+dt {
+  font-weight: bold;
+  font-style: italic;
+  color: darkcyan;
+  margin-top: 10px;
+  position: relative;
+}
+
+dd {
+  margin-left: 15px;
+  margin-bottom: 8px;
+  color: #444;
+  line-height: 1.4;
 }
 
 section {
