@@ -12,7 +12,120 @@
     <main>
       <nav></nav>
 
-      <section id="banner"></section>
+      <section id="banner">
+        <div class="carousel-wrapper">
+          <input
+            type="radio"
+            name="slide"
+            id="slide1"
+            class="slide-input"
+            checked
+          />
+          <input type="radio" name="slide" id="slide2" class="slide-input" />
+          <input type="radio" name="slide" id="slide3" class="slide-input" />
+          <input type="radio" name="slide" id="slide4" class="slide-input" />
+
+          <div class="slides-container">
+            <div class="slide">
+              <picture>
+                <source
+                  media="(min-width: 800px)"
+                  srcset="
+                    https://placehold.co/1200x500/003366/FFFFFF?text=Slide+1
+                  "
+                />
+                <img
+                  src="https://placehold.co/800x500/003366/FFFFFF?text=Slide+1"
+                  alt="Banner promocional 1"
+                />
+              </picture>
+              <div class="slide-content">
+                <h2>Promoção de Inverno</h2>
+                <a href="#" class="cta">Ver ofertas</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <picture>
+                <source
+                  media="(min-width: 800px)"
+                  srcset="
+                    https://placehold.co/1200x500/990033/FFFFFF?text=Slide+2
+                  "
+                />
+                <img
+                  src="https://placehold.co/800x500/990033/FFFFFF?text=Slide+2"
+                  alt="Banner promocional 2"
+                />
+              </picture>
+              <div class="slide-content">
+                <h2>Novidades da Estação</h2>
+                <a href="#" class="cta">Confira agora</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <picture>
+                <source
+                  media="(min-width: 800px)"
+                  srcset="
+                    https://placehold.co/1200x500/339900/FFFFFF?text=Slide+3
+                  "
+                />
+                <img
+                  src="https://placehold.co/800x500/339900/FFFFFF?text=Slide+3"
+                  alt="Banner promocional 3"
+                />
+              </picture>
+              <div class="slide-content">
+                <h2>Frete Grátis</h2>
+                <a href="#" class="cta">Saiba mais</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <picture>
+                <source
+                  media="(min-width: 800px)"
+                  srcset="
+                    https://placehold.co/1200x500/663399/FFFFFF?text=Slide+4
+                  "
+                />
+                <img
+                  src="https://placehold.co/800x500/663399/FFFFFF?text=Slide+4"
+                  alt="Banner promocional 4"
+                />
+              </picture>
+              <div class="slide-content">
+                <h2>50% OFF</h2>
+                <a href="#" class="cta">Aproveite</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-dots">
+            <label
+              for="slide1"
+              class="dot"
+              aria-label="Ir para Slide 1"
+            ></label>
+            <label
+              for="slide2"
+              class="dot"
+              aria-label="Ir para Slide 2"
+            ></label>
+            <label
+              for="slide3"
+              class="dot"
+              aria-label="Ir para Slide 3"
+            ></label>
+            <label
+              for="slide4"
+              class="dot"
+              aria-label="Ir para Slide 4"
+            ></label>
+          </div>
+        </div>
+      </section>
       <section id="message-display"></section>
       <section id="products"></section>
       <section id="reviews"></section>
