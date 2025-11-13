@@ -16,7 +16,85 @@
       <section id="message-display"></section>
       <section id="products"></section>
       <section id="reviews"></section>
-      <section id="media"></section>
+      <section id="media" aria-labelledby="media-title">
+        <h2 id="media-title">Selecionados</h2>
+        <article>
+          <p>
+            Aproveite esta seleção de vídeos e músicas que a PD Market
+            selecionou especialmente para você!
+          </p>
+          <video autoplay loop muted width="480" poster="img/video-poster.jpg">
+            <source src="video/video.mp4" type="video/mp4" />
+            <track
+              src="video/legenda.vtt"
+              kind="subtitles"
+              srclang="pt-BR"
+              label="Português"
+            />
+            <!-- Não há arquivo de legenda -->
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+
+          <audio controls autoplay loop muted>
+            <source src="audio/audio.mp3" type="audio/mpeg" />
+            Seu navegador não suporta o elemento de áudio.
+          </audio>
+
+          <canvas id="promoCanvas" width="600" height="300"> </canvas>
+          <p>Futuramente você verá o novo mascote <u>aqui</u></p>
+
+          <figure>
+            <img
+              src='data:image/svg+xml;utf8,
+              <svg xmlns="http://www.w3.org/2000/svg" width="480" height="300">
+                <rect width="100%" height="100%" fill="%23f7f7f7" stroke="%23dcdcdc" rx="8" ry="8"/>
+                <text x="50%" y="50%" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="%23888" text-anchor="middle" dominant-baseline="middle">
+                  PLACEHOLDER
+                </text>
+              </svg>'
+              alt="Mapa ilustrativo da loja PD Market com áreas clicáveis"
+              usemap="#store-map"
+              width="480"
+              height="300"
+              style="
+                display: block;
+                max-width: 600px;
+                width: 600px;
+                height: 300px;
+              "
+            />
+
+            <map name="store-map">
+              <area
+                shape="rect"
+                coords="10,10,120,120"
+                href="#ofertas"
+                alt="Ofertas Especiais"
+              />
+              <area
+                shape="circle"
+                coords="300,80,50"
+                href="#novidades"
+                alt="Novidades"
+              />
+            </map>
+
+            <figcaption>
+              <i>Explore nossas seções e descubra ofertas exclusivas.</i>
+            </figcaption>
+          </figure>
+          <embed
+            src="https://www.youtube.com/embed/KwFrvsnxPW0"
+            width="480"
+            height="270"
+            title="Vídeo externo incorporado"
+          />
+          <object data="img/object-img.webp" width="400" height="300">
+            <param name="loop" value="false" />
+            Seu navegador não suporta o formato incorporado.
+          </object>
+        </article>
+      </section>
       <section id="monthly-data"></section>
       <section id="contact"></section>
 
