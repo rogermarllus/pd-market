@@ -94,10 +94,106 @@ section {
 }
 
 #monthly-data {
-  background-color: lightskyblue;
-  color: black;
-  grid-column: 2 / 3;
-  grid-row: 6 / 7;
+  background-color: #eee; /* fundo da seção */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* destaque da área */
+  border-radius: 8px;
+  padding: 20px;
+  color: #333;
+}
+
+#monthly-data h2,
+#monthly-data h3 {
+  color: darkslategrey;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#monthly-data table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#monthly-data caption {
+  caption-side: top;
+  font-weight: bold;
+  color: darkslategrey;
+  padding: 10px;
+}
+
+#monthly-data th,
+#monthly-data td {
+  padding: 12px 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+#monthly-data th {
+  background-color: #ddd;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#monthly-data tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+#monthly-data tfoot td {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+#monthly-data meter {
+  width: 80%;
+  height: 12px;
+  border-radius: 6px;
+}
+
+#monthly-data meter::-webkit-meter-bar {
+  background: #ccc;
+  border-radius: 6px;
+}
+
+#monthly-data meter::-webkit-meter-optimum-value {
+  background: linear-gradient(90deg, #00b894, #0984e3);
+  border-radius: 6px;
+}
+
+#monthly-data progress {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  appearance: none;
+}
+
+#monthly-data progress::-webkit-progress-bar {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+#monthly-data progress::-webkit-progress-value {
+  background-color: #00b894;
+  border-radius: 10px;
+}
+
+#monthly-data p {
+  text-align: justify;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+#monthly-data small {
+  display: block;
+  text-align: right;
+  color: #555;
+  margin-top: 5px;
+  font-style: italic;
 }
 
 #contact {
