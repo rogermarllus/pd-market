@@ -21,8 +21,17 @@
       <section id="contact">
         <h2>Entre em Contato</h2>
 
+        <!--
+          <form> cria um formulário interativo para envio de dados. Aqui está sendo usado para permitir que o cliente entre em contato.
+        -->
         <form action="#" method="post">
+          <!--
+            <fieldset> agrupa campos relacionados dentro de um formulário. Foi usado para organizar visualmente e semanticamente todos os inputs da mensagem.
+          -->
           <fieldset>
+            <!--
+              <legend> define um título para o grupo de campos dentro do fieldset. Está sendo usado para identificar claramente o propósito do formulário.
+            -->
             <legend>Envie-nos uma mensagem</legend>
             <label for="nome">Nome completo:</label>
             <input
@@ -41,10 +50,18 @@
               placeholder="seuemail@exemplo.com"
               required
             />
-
+            <!--
+              <select> cria uma lista suspensa de opções. Está sendo usado para o cliente escolher o tipo de assunto.
+            -->
             <label for="assunto">Assunto:</label>
             <select id="assunto" name="assunto">
+              <!--
+                <optgroup> agrupa opções dentro de um select. Usado para organizar visualmente "Suporte" e "Outros".
+              -->
               <optgroup label="Suporte">
+                <!--
+                  <option> representa uma opção dentro do select.
+                -->
                 <option value="duvida">Dúvida</option>
                 <option value="problema">Problema técnico</option>
               </optgroup>
@@ -55,6 +72,9 @@
             </select>
 
             <label for="mensagem">Mensagem:</label>
+            <!--
+              <textarea> cria uma área de texto multilinhas. Usado porque mensagens costumam ser longas e precisam de mais espaço.
+            -->
             <textarea
               id="mensagem"
               name="mensagem"
@@ -63,6 +83,9 @@
               required
             ></textarea>
 
+            <!--
+              <button> cria um botão clicável. Aqui está sendo usado para enviar o formulário.
+            -->
             <button type="submit">Enviar Mensagem</button>
           </fieldset>
         </form>
