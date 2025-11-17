@@ -23,23 +23,27 @@
             Aproveite esta seleção de vídeos e músicas que a PD Market
             selecionou especialmente para você!
           </p>
+          <!-- <video> insere um player de vídeo nativo no site -->
           <video autoplay loop muted width="480" poster="img/video-poster.jpg">
             <source src="video/video.mp4" type="video/mp4" />
+            <!-- <track> adiciona legendas, capítulos ou descrições ao vídeo -->
+            <!-- Não há arquivo de legenda -->
             <track
               src="video/legenda.vtt"
               kind="subtitles"
               srclang="pt-BR"
               label="Português"
             />
-            <!-- Não há arquivo de legenda -->
             Seu navegador não suporta o elemento de vídeo.
           </video>
 
+          <!-- <audio> insere um player de áudio nativo -->
           <audio controls autoplay loop muted>
             <source src="audio/audio.mp3" type="audio/mpeg" />
             Seu navegador não suporta o elemento de áudio.
           </audio>
 
+          <!-- <canvas> cria uma área gráfica desenhada via JavaScript -->
           <canvas id="promoCanvas" width="600" height="300"> </canvas>
           <p>Futuramente você verá o novo mascote <u>aqui</u></p>
 
@@ -63,8 +67,9 @@
                 height: 300px;
               "
             />
-
+            <!-- <map> cria um mapa de áreas clicáveis em uma imagem -->
             <map name="store-map">
+              <!-- <area> define regiões clicáveis dentro de um <map> -->
               <area
                 shape="rect"
                 coords="10,10,120,120"
@@ -83,13 +88,16 @@
               <i>Explore nossas seções e descubra ofertas exclusivas.</i>
             </figcaption>
           </figure>
+          <!-- <embed> incorpora conteúdo externo diretamente na página -->
           <embed
             src="https://www.youtube.com/embed/KwFrvsnxPW0"
             width="480"
             height="270"
             title="Vídeo externo incorporado"
           />
+          <!-- <object> incorpora arquivos externos, podendo conter fallback interno -->
           <object data="img/object-img.webp" width="400" height="300">
+            <!-- <param> configura opções específicas dentro de um <object> -->
             <param name="loop" value="false" />
             Seu navegador não suporta o formato incorporado.
           </object>
