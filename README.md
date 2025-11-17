@@ -84,9 +84,8 @@ Todo o dinamismo da página foi construído sobrepondo "estados" do CSS, sem man
 
 O projeto está publicado e pode ser acessado diretamente através do link:
 
-**[https://pd-market-SEU-LINK.vercel.app/](https://pd-market-SEU-LINK.vercel.app/)**
+**[https://pd-market.vercel.app/](https://pd-market.vercel.app/)**
 
-_(Nota: Substitua "SEU-LINK" pelo link real do seu deploy no Vercel.)_
 
 ### Localmente
 
@@ -94,7 +93,7 @@ Para rodar este projeto localmente, basta clonar o repositório e abrir o arquiv
 
 ```bash
 # 1. Clone o repositório (substitua pelo seu link)
-git clone [https://github.com/seu-usuario/pd-market.git](https://github.com/seu-usuario/pd-market.git)
+git clone [https://github.com/rogermarllus/pd-market.git](https://github.com/rogermarllus/pd-market.git)
 
 # 2. Navegue até a pasta do projeto
 cd pd-market
