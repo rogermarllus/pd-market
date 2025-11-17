@@ -12,8 +12,11 @@
     <main>
       <nav></nav>
 
+      <!-- <section> representa uma seção temática da página, usada aqui para o banner principal -->
       <section id="banner">
+        <!-- <div> cria um contêiner genérico para agrupar elementos, usado para estruturar o carrossel -->
         <div class="carousel-wrapper">
+          <!-- <input> cria campos interativos; aqui usado como botões de rádio para trocar os slides -->
           <input
             type="radio"
             name="slide"
@@ -27,20 +30,25 @@
 
           <div class="slides-container">
             <div class="slide">
+              <!-- <picture> permite carregar imagens diferentes dependendo do tamanho da tela -->
               <picture>
+                <!-- <source> define versões alternativas da imagem para diferentes resoluções -->
                 <source
                   media="(min-width: 800px)"
                   srcset="
                     https://placehold.co/1200x500/003366/FFFFFF?text=Slide+1
                   "
                 />
+                <!-- <img> insere a imagem principal exibida no slide -->
                 <img
                   src="https://placehold.co/800x500/003366/FFFFFF?text=Slide+1"
                   alt="Banner promocional 1"
                 />
               </picture>
               <div class="slide-content">
+                <!-- <h2> define um título de nível 2, usado como manchete do slide -->
                 <h2>Promoção de Inverno</h2>
+                <!-- <a> cria um link clicável, usado aqui como botão de chamada para ação -->
                 <a href="#" class="cta">Ver ofertas</a>
               </div>
             </div>
@@ -103,6 +111,7 @@
             </div>
           </div>
           <div class="nav-dots">
+            <!-- <label> associa um rótulo clicável a um input; aqui serve como botão visual do carrossel -->
             <label
               for="slide1"
               class="dot"
