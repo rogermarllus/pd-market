@@ -82,7 +82,6 @@
                 <a href="#" class="cta">Ver ofertas</a>
               </div>
             </div>
-
             <div class="slide">
               <picture>
                 <source
@@ -1339,7 +1338,82 @@
           </object>
         </article>
       </section>
-      <section id="monthly-data"></section>
+      <section id="monthly-data" aria-labelledby="monthly-title">
+        <h2 id="monthly-title">Dados do Mês — Novembro de 2025</h2>
+
+        <!-- <table> cria uma estrutura organizada para apresentar dados tabulares; aqui ela mostra as métricas mensais da loja -->
+        <table>
+          <!-- <caption> descreve o propósito da tabela -->
+          <caption>
+            Métricas de desempenho da PD Market
+          </caption>
+
+          <!-- <thead> agrupa o cabeçalho da tabela; usado para organizar e diferenciar os títulos das colunas -->
+          <thead>
+            <!-- <tr> representa uma linha da tabela; nesta linha estão os títulos das colunas -->
+            <tr>
+              <!-- <th> são células de cabeçalho; indicam o rótulo de cada coluna da tabela -->
+              <th>Métrica</th>
+              <th>Valor</th>
+              <th>Desempenho</th>
+            </tr>
+          </thead>
+
+          <!-- <tbody> agrupa as linhas de dados principais da tabela; usado para separar o conteúdo do cabeçalho e do rodapé -->
+          <tbody>
+            <tr>
+              <!-- <td> define células comuns de dados; aqui descrevem cada métrica e seus valores -->
+              <td>Pedidos entregues no prazo</td>
+              <td>95%</td>
+
+              <!-- <meter> mostra visualmente um valor dentro de um intervalo; usado para representar desempenho de forma clara e acessível -->
+              <td>
+                <meter value="0.95" min="0" max="1" optimum="1">95%</meter>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Satisfação dos clientes</td>
+              <td>88%</td>
+              <td>
+                <meter value="0.88" min="0" max="1" optimum="0.9">88%</meter>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Crescimento de vendas</td>
+              <td>12%</td>
+              <td>
+                <meter value="0.12" min="0" max="0.2" optimum="0.15">12%</meter>
+              </td>
+            </tr>
+          </tbody>
+
+          <!-- <tfoot> agrupa o rodapé da tabela; aqui é usado para destacar um resumo ou total -->
+          <tfoot>
+            <tr>
+              <td colspan="2"><strong>Total de Vendas Processadas:</strong></td>
+              <!-- <output> representa um valor calculado ou gerado; usado aqui para exibir a quantidade total de vendas -->
+              <td>
+                <output name="vendas">3.200</output>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <!-- <h3> cria um subtítulo; usado para introduzir o gráfico de progresso abaixo -->
+        <h3>Tendência de Crescimento</h3>
+
+        <p>
+          Estamos em constante expansão! Nosso volume de vendas e satisfação dos
+          clientes tem apresentado crescimento contínuo, demonstrando a
+          confiança do público na <strong>PD Market</strong>.
+        </p>
+
+        <!-- <progress> exibe visualmente o progresso rumo a uma meta; aqui representa o alcance da meta de crescimento -->
+        <progress value="70" max="100">70%</progress>
+        <p><small>Meta mensal de crescimento: 70% atingido</small></p>
+      </section>
       <section id="contact"></section>
 
       <!--
