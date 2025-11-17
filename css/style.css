@@ -561,10 +561,53 @@ section {
 }
 
 #reviews {
-  background-color: cyan;
+  background-color: #eee;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   color: black;
   grid-column: 2 / 3;
   grid-row: 4 / 5;
+  text-align: left;
+}
+
+#reviews h2,
+h3 {
+  color: darkslategray;
+}
+
+#reviews article {
+  margin-top: 10px;
+}
+
+.rating {
+  margin-top: 5px;
+}
+
+#reviews blockquote {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+blockquote p {
+  margin-bottom: 10px;
+}
+
+.icon-user {
+  width: 20px;
+  margin-right: 5px;
+}
+
+cite {
+  color: darkslategray;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #media {
