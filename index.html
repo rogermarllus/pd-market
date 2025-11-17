@@ -1,21 +1,1257 @@
+<!-- <!DOCTYPE html> declara ao navegador que este arquivo usa a versão HTML5 -->
 <!DOCTYPE html>
+<!-- <html> é o elemento raiz que engloba toda a estrutura da página -->
 <html lang="pt-BR">
+  <!-- <head> contém metadados e configurações que não aparecem diretamente na página -->
   <head>
+    <!-- <meta charset="UTF-8"> define o padrão de caracteres usado, permitindo acentos -->
     <meta charset="UTF-8" />
+    <!-- <meta name="viewport"> ajusta a página para funcionar bem em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <base> define um caminho base para todos os links e recursos relativos da página -->
+    <base href="/" />
+    <!-- <title> define o título da aba do navegador -->
     <title>PD Market</title>
+    <!-- <link> conecta o HTML a um arquivo CSS externo -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header></header>
+    <!-- <header> representa o cabeçalho da página ou seção, geralmente contendo logo ou título -->
+    <header>
+      <!-- <img> insere uma imagem na página, usada aqui para mostrar o logotipo -->
+      <img src="img/logo.png" alt="Logo do PD Market" />
+      <!-- <h1> define o título principal da página -->
+      <h1>PD Market</h1>
+    </header>
 
     <main>
-      <nav></nav>
+      <!-- <nav> representa a área de navegação da página, contendo links para outras seções -->
+      <nav>
+        <!-- <h4> define um subtítulo ou cabeçalho de seção em nível 4 -->
+        <h4>Navegação</h4>
+        <!-- <hr> cria uma linha horizontal usada aqui para separar visualmente o título dos links -->
+        <hr />
+        <!-- <ul> cria uma lista não ordenada, usada aqui para listar os itens do menu -->
+        <ul>
+          <!-- <li> representa um item da lista -->
+          <!-- <a> cria um link clicável para navegar para outras partes da página -->
+          <li><a href="#banner">Início</a></li>
+          <li><a href="#products">Produtos</a></li>
+          <li><a href="#reviews">Avaliações</a></li>
+          <li><a href="#media">Social</a></li>
+          <li><a href="#monthly-data">Dados Mensais</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+      <!-- <section> representa uma seção temática da página, usada aqui para o banner principal -->
+      <section id="banner">
+        <!-- <div> cria um contêiner genérico para agrupar elementos, usado para estruturar o carrossel -->
+        <div class="carousel-wrapper">
+          <!-- <input> cria campos interativos; aqui usado como botões de rádio para trocar os slides -->
+          <input
+            type="radio"
+            name="slide"
+            id="slide1"
+            class="slide-input"
+            checked
+          />
+          <input type="radio" name="slide" id="slide2" class="slide-input" />
+          <input type="radio" name="slide" id="slide3" class="slide-input" />
+          <input type="radio" name="slide" id="slide4" class="slide-input" />
+          <div class="slides-container">
+            <div class="slide">
+              <!-- <picture> permite carregar imagens diferentes dependendo do tamanho da tela -->
+              <picture>
+                <!-- <source> define versões alternativas da imagem para diferentes resoluções -->
+                <source
+                  media="(min-width: 800px)"
+                  srcset="
+                    https://placehold.co/1200x500/003366/FFFFFF?text=Slide+1
+                  "
+                />
+                <!-- <img> insere a imagem principal exibida no slide -->
+                <img
+                  src="https://placehold.co/800x500/003366/FFFFFF?text=Slide+1"
+                  alt="Banner promocional 1"
+                />
+              </picture>
+              <div class="slide-content">
+                <!-- <h2> define um título de nível 2, usado como manchete do slide -->
+                <h2>Promoção de Inverno</h2>
+                <!-- <a> cria um link clicável, usado aqui como botão de chamada para ação -->
+                <a href="#" class="cta">Ver ofertas</a>
+              </div>
+            </div>
 
-      <section id="banner"></section>
-      <section id="message-display"></section>
-      <section id="products"></section>
-      <section id="reviews"></section>
+            <div class="slide">
+              <picture>
+                <source
+                  media="(min-width: 800px)"
+                  srcset="
+                    https://placehold.co/1200x500/990033/FFFFFF?text=Slide+2
+                  "
+                />
+                <img
+                  src="https://placehold.co/800x500/990033/FFFFFF?text=Slide+2"
+                  alt="Banner promocional 2"
+                />
+              </picture>
+              <div class="slide-content">
+                <h2>Novidades da Estação</h2>
+                <a href="#" class="cta">Confira agora</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <picture>
+                <source
+                  media="(min-width: 800px)"
+                  srcset="
+                    https://placehold.co/1200x500/339900/FFFFFF?text=Slide+3
+                  "
+                />
+                <img
+                  src="https://placehold.co/800x500/339900/FFFFFF?text=Slide+3"
+                  alt="Banner promocional 3"
+                />
+              </picture>
+              <div class="slide-content">
+                <h2>Frete Grátis</h2>
+                <a href="#" class="cta">Saiba mais</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <picture>
+                <source
+                  media="(min-width: 800px)"
+                  srcset="
+                    https://placehold.co/1200x500/663399/FFFFFF?text=Slide+4
+                  "
+                />
+                <img
+                  src="https://placehold.co/800x500/663399/FFFFFF?text=Slide+4"
+                  alt="Banner promocional 4"
+                />
+              </picture>
+              <div class="slide-content">
+                <h2>50% OFF</h2>
+                <a href="#" class="cta">Aproveite</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-dots">
+            <!-- <label> associa um rótulo clicável a um input; aqui serve como botão visual do carrossel -->
+            <label
+              for="slide1"
+              class="dot"
+              aria-label="Ir para Slide 1"
+            ></label>
+            <label
+              for="slide2"
+              class="dot"
+              aria-label="Ir para Slide 2"
+            ></label>
+            <label
+              for="slide3"
+              class="dot"
+              aria-label="Ir para Slide 3"
+            ></label>
+            <label
+              for="slide4"
+              class="dot"
+              aria-label="Ir para Slide 4"
+            ></label>
+          </div>
+        </div>
+      </section>
+      <section id="message-display" aria-labelledby="mascot-message-title">
+        <!-- <h2> define um subtítulo ou título de segundo nível da seção -->
+        <h2 id="mascot-message-title">A Hora é Agora!</h2>
+        <!-- <p> representa um parágrafo de texto -->
+        <p>
+          Olá, cliente! Trago uma mensagem do
+          <!-- <abbr> representa uma abreviação e mostra o significado completo ao passar o mouse -->
+          <abbr title="PD Market">PDM</abbr>
+          e estou aqui para te ajudar a aproveitar as melhores ofertas da
+          <abbr title="Black Friday">BF</abbr>! 😄
+        </p>
+        <p>
+          Nosso gerente sempre diz:
+          <!-- <q> indica uma citação curta dentro do parágrafo, com atributo cite para referência -->
+          <q cite="https://pdmarket.com.br/sobre">
+            <!-- <em> enfatiza o texto, dando destaque semântico (como ênfase ou entonação) -->
+            <em>
+              Queremos levar tecnologia de qualidade a todos, com preços justos
+              e atendimento incrível.
+            </em>
+          </q>
+        </p>
+        <p>
+          Então não perca tempo — confira nossas promoções e encontre o produto
+          perfeito para você!
+        </p>
+      </section>
+      <section id="products" aria-labelledby="products-title">
+        <h2 id="products-title">Ofertas Especiais</h2>
+
+        <!-- <form> cria um formulário para envio de dados, usado aqui para filtrar produtos -->
+        <form id="product-filter" aria-label="Filtro de produtos">
+          <!-- <select> cria um campo de seleção com múltiplas opções -->
+          <select id="categoria" name="categoria">
+            <!-- <option> define cada opção dentro do select -->
+            <option value="todas">Todas</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="informatica">Informática</option>
+            <option value="eletrodomesticos">Eletrodomésticos</option>
+            <option value="acessorios">Acessórios</option>
+          </select>
+          <!-- <button> representa um botão interativo, aqui usado para "aplicar" o filtro (apenas visual) -->
+          <button type="submit">Filtrar</button>
+        </form>
+
+        <div class="product-grid">
+          <!-- <article> representa um conteúdo independente da página, como um card de produto -->
+          <article class="product-card">
+            <!-- <figure> agrupa uma mídia e sua legenda -->
+            <figure>
+              <!-- <figcaption> fornece uma legenda para a mídia dentro do figure -->
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Smartphone PD One</figcaption>
+            </figure>
+            <h3>Smartphone PD One 128GB</h3>
+            <p>
+              <!-- <strong> destaca o texto com forte importância semântica -->
+              <strong>R$ 1.799,00</strong>
+              <!-- <small> representa informações secundárias como preço antigo -->
+              <small>R$ 2.199,00</small>
+              <!-- <span> é um elemento em linha usado para pequenas marcações de texto -->
+              <span>ou 10x de R$ 179,90</span>
+            </p>
+            <span class="promo-info">
+              <!-- <mark> destaca visualmente uma parte do texto como importante -->
+              <mark>Oferta</mark>
+              <!-- <time> representa datas/horários em formato semântico reconhecível -->
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <!-- <label> ligado a um input; aqui funciona como botão para abrir o modal -->
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Fone Bluetooth PD Sound</figcaption>
+            </figure>
+            <h3>Fone Bluetooth PD Sound</h3>
+            <p>
+              <strong>R$ 249,90</strong>
+              <small>R$ 399,90</small>
+              <span>ou 5x de R$ 49,98</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-25">até 25/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Notebook Pro X 512GB</figcaption>
+            </figure>
+            <h3>Notebook Pro X+ 512GB</h3>
+            <p>
+              <strong>R$ 4.899,00</strong>
+              <small>R$ 5.999,00</small>
+              <span>ou 12x de R$ 408,25</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Smart TV 4K 55 Polegadas</figcaption>
+            </figure>
+            <h3>Smart TV 4K 55 Polegadas</h3>
+            <p>
+              <strong>R$ 2.799,00</strong>
+              <small>R$ 3.499,00</small>
+              <span>ou 10x de R$ 279,90</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-28">até 28/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Cafeteira Expressa Auto</figcaption>
+            </figure>
+            <h3>Cafeteira Expressa Auto</h3>
+            <p>
+              <strong>R$ 499,90</strong>
+              <small>R$ 699,90</small>
+              <span>ou 6x de R$ 83,31</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Mouse Gamer RGB 16000DPI</figcaption>
+            </figure>
+            <h3>Mouse Gamer RGB 16000DPI</h3>
+            <p>
+              <strong>R$ 329,90</strong>
+              <small>R$ 499,90</small>
+              <span>ou 5x de R$ 65,98</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-27">até 27/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Cadeira Gamer Ergonômica</figcaption>
+            </figure>
+            <h3>Cadeira Gamer Ergonômica</h3>
+            <p>
+              <strong>R$ 1.199,00</strong>
+              <small>R$ 1.599,00</small>
+              <span>ou 10x de R$ 119,90</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Air Fryer 5 Litros</figcaption>
+            </figure>
+            <h3>Air Fryer "Sensação" 5 Litros</h3>
+            <p>
+              <strong>R$ 399,00</strong>
+              <small>R$ 549,00</small>
+              <span>ou 6x de R$ 66,50</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-29">até 29/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Smartwatch PD Fit V2</figcaption>
+            </figure>
+            <h3>Smartwatch PD Fitness V2</h3>
+            <p>
+              <strong>R$ 799,00</strong>
+              <small>R$ 1.099,00</small>
+              <span>ou 8x de R$ 99,87</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Tablet 10.1 Polegadas 64GB</figcaption>
+            </figure>
+            <h3>Tablet 10.1 Polegadas 64GB</h3>
+            <p>
+              <strong>R$ 1.299,00</strong>
+              <small>R$ 1.699,00</small>
+              <span>ou 10x de R$ 129,90</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-28">até 28/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Teclado Mecânico Sem Fio</figcaption>
+            </figure>
+            <h3>Teclado Mecânico Sem Fio</h3>
+            <p>
+              <strong>R$ 599,90</strong>
+              <small>R$ 899,90</small>
+              <span>ou 7x de R$ 85,70</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Liquidificador Power 1000W</figcaption>
+            </figure>
+            <h3>Liquidificador Power 1000W</h3>
+            <p>
+              <strong>R$ 189,90</strong>
+              <small>R$ 299,90</small>
+              <span>ou 3x de R$ 63,30</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-27">até 27/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Headset Pro 7.1 Surround</figcaption>
+            </figure>
+            <h3>Headset Pro 7.1 Surround</h3>
+            <p>
+              <strong>R$ 649,00</strong>
+              <small>R$ 999,00</small>
+              <span>ou 8x de R$ 81,12</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Monitor Ultrawide 29 Polegadas</figcaption>
+            </figure>
+            <h3>Monitor Ultrawide 29 Polegadas</h3>
+            <p>
+              <strong>R$ 1.399,00</strong>
+              <small>R$ 1.899,00</small>
+              <span>ou 10x de R$ 139,90</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-29">até 29/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Caixa de Som Bluetooth 50W</figcaption>
+            </figure>
+            <h3>Caixa de Som Bluetooth 50W</h3>
+            <p>
+              <strong>R$ 449,00</strong>
+              <small>R$ 699,00</small>
+              <span>ou 6x de R$ 74,83</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Batedeira Planetária 700W</figcaption>
+            </figure>
+            <h3>Batedeira Planetária 700W</h3>
+            <p>
+              <strong>R$ 599,00</strong>
+              <small>R$ 849,00</small>
+              <span>ou 7x de R$ 85,57</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-28">até 28/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>HD Externo 2TB USB 3.0</figcaption>
+            </figure>
+            <h3>HD Externo 2TB USB 3.0</h3>
+            <p>
+              <strong>R$ 429,90</strong>
+              <small>R$ 599,90</small>
+              <span>ou 6x de R$ 71,65</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Câmera DSLR Pro 24MP</figcaption>
+            </figure>
+            <h3>Câmera DSLR Pro 24MP</h3>
+            <p>
+              <strong>R$ 3.899,00</strong>
+              <small>R$ 4.999,00</small>
+              <span>ou 12x de R$ 324,91</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-27">até 27/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Roteador Mesh Wifi 6</figcaption>
+            </figure>
+            <h3>Roteador MeshLink Wifi 6</h3>
+            <p>
+              <strong>R$ 899,00</strong>
+              <small>R$ 1.299,00</small>
+              <span>ou 9x de R$ 99,88</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Aspirador de Pó Robô</figcaption>
+            </figure>
+            <h3>Aspirador de Pó Robótico</h3>
+            <p>
+              <strong>R$ 1.599,00</strong>
+              <small>R$ 2.199,00</small>
+              <span>ou 10x de R$ 159,90</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-29">até 29/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Micro-ondas 30L Espelhado</figcaption>
+            </figure>
+            <h3>Micro-ondas 30L Espelhado</h3>
+            <p>
+              <strong>R$ 699,00</strong>
+              <small>R$ 949,00</small>
+              <span>ou 7x de R$ 99,85</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Webcam 4K Pro</figcaption>
+            </figure>
+            <h3>Webcam 4K 60fps Pro+</h3>
+            <p>
+              <strong>R$ 749,00</strong>
+              <small>R$ 1.099,00</small>
+              <span>ou 8x de R$ 93,62</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-28">até 28/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Carregador Portátil 20000mAh</figcaption>
+            </figure>
+            <h3>Carregador Portátil 20000mAh</h3>
+            <p>
+              <strong>R$ 199,90</strong>
+              <small>R$ 349,90</small>
+              <span>ou 3x de R$ 66,63</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Soundbar 2.1 120W</figcaption>
+            </figure>
+            <h3>Soundbar PD Sound 2.1 120W</h3>
+            <p>
+              <strong>R$ 899,00</strong>
+              <small>R$ 1.399,00</small>
+              <span>ou 9x de R$ 99,88</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-27">até 27/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Impressora Multifuncional Tanque</figcaption>
+            </figure>
+            <h3>Impressora Multifuncional Tanque</h3>
+            <p>
+              <strong>R$ 1.099,00</strong>
+              <small>R$ 1.499,00</small>
+              <span>ou 10x de R$ 109,90</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Panela de Pressão Elétrica</figcaption>
+            </figure>
+            <h3>Panela de Pressão Elétrica</h3>
+            <p>
+              <strong>R$ 479,00</strong>
+              <small>R$ 699,00</small>
+              <span>ou 6x de R$ 79,83</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-29">até 29/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Fone TWS com Noise Cancel</figcaption>
+            </figure>
+            <h3>Fone TWS com Noise Cancel</h3>
+            <p>
+              <strong>R$ 549,00</strong>
+              <small>R$ 899,00</small>
+              <span>ou 7x de R$ 78,42</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Projetor Full HD 3000 Lúmens</figcaption>
+            </figure>
+            <h3>Projetor Full HD 3000 Lúmens</h3>
+            <p>
+              <strong>R$ 2.199,00</strong>
+              <small>R$ 2.999,00</small>
+              <span>ou 10x de R$ 219,90</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-28">até 28/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>SSD 1TB NVMe Gen4</figcaption>
+            </figure>
+            <h3>SSD 1TeraByte NVMe Gen4</h3>
+            <p>
+              <strong>R$ 699,90</strong>
+              <small>R$ 999,90</small>
+              <span>ou 7x de R$ 99,98</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-30">até 30/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+
+          <article class="product-card">
+            <figure>
+              <img
+                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
+                alt="Imagem do produto"
+              />
+              <figcaption>Luminária Smart RGB</figcaption>
+            </figure>
+            <h3>Luminária PD Smart RGB</h3>
+            <p>
+              <strong>R$ 229,90</strong>
+              <small>R$ 349,90</small>
+              <span>ou 4x de R$ 57,47</span>
+            </p>
+            <span class="promo-info">
+              <mark>Oferta</mark> •
+              <time datetime="2025-11-27">até 27/11</time>
+            </span>
+            <label
+              for="generic-modal-toggle"
+              class="open-modal"
+              role="button"
+              aria-controls="generic-modal"
+            >
+              Ver detalhes
+            </label>
+          </article>
+        </div>
+        <input
+          type="checkbox"
+          id="generic-modal-toggle"
+          class="modal-toggle"
+          hidden
+        />
+
+        <div
+          class="modal"
+          id="generic-modal"
+          role="dialog"
+          aria-labelledby="generic-modal-title"
+        >
+          <label for="generic-modal-toggle" class="overlay"></label>
+
+          <div class="modal-content">
+            <h3 id="generic-modal-title">Aviso</h3>
+            <hr />
+            <p>
+              Desculpe, não foi possível encontrar as informações do produto no
+              momento.
+            </p>
+
+            <label
+              for="generic-modal-toggle"
+              class="modal-close-button"
+              role="button"
+            >
+              Fechar
+            </label>
+          </div>
+        </div>
+      </section>
+      <section id="reviews">
+        <h2>Avaliações</h2>
+        <hr />
+        <article>
+          <h3>Excelente!</h3>
+          <div class="rating">
+            <!-- <svg> é usado para exibir gráficos vetoriais escaláveis diretamente no HTML -->
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <!-- <path> define formas dentro do SVG usando coordenadas vetoriais -->
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+          </div>
+          <!-- <blockquote> representa uma citação longa ou destacada, foi usada para representar a avaliação do usuário -->
+          <blockquote>
+            <p>
+              "O site é muito intuitivo e fácil de navegar. Fiz minha compra em
+              poucos minutos e recebi tudo direitinho.
+              <em>Com certeza comprarei novamente!</em>"
+            </p>
+            <!-- <cite> indica a fonte ou autor da citação, nesse caso, o usuário que realizou a avaliação -->
+            <cite>
+              <img
+                class="icon-user"
+                src="img/user-icon.png"
+                alt="Ícone de Usuário"
+              />
+              Mariana Lopes
+            </cite>
+          </blockquote>
+        </article>
+        <hr />
+        <article>
+          <h3>Muito bom!</h3>
+          <div class="rating">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#888"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+          </div>
+          <blockquote>
+            <p>
+              "Gostei bastante da variedade de produtos e do atendimento. Apenas
+              achei o frete um pouco caro, mas a qualidade compensa."
+            </p>
+            <cite
+              ><img
+                class="icon-user"
+                src="img/user-icon.png"
+                alt="Ícone de Usuário"
+              />
+              Rafael Monteiro</cite
+            >
+          </blockquote>
+        </article>
+        <hr />
+        <article>
+          <h3>Incrível!</h3>
+          <div class="rating">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ebc807"
+                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
+              />
+            </svg>
+          </div>
+          <blockquote>
+            <p>
+              "Excelente experiência! As fotos correspondem exatamente ao
+              produto e o cuidado na embalagem foi um diferencial.
+              <em>Recomendo sem hesitar!</em>"
+            </p>
+            <cite
+              ><img
+                class="icon-user"
+                src="img/user-icon.png"
+                alt="Ícone de Usuário"
+              />
+              Beatriz Souza</cite
+            >
+          </blockquote>
+        </article>
+      </section>
       <section id="media" aria-labelledby="media-title">
         <h2 id="media-title">Selecionados</h2>
         <article>
@@ -106,7 +1342,73 @@
       <section id="monthly-data"></section>
       <section id="contact"></section>
 
-      <aside></aside>
+      <!--
+        <aside> representa conteúdo complementar ao conteúdo principal. Aqui está sendo usado para mostrar informações extras relacionadas ao PD Market.
+      -->
+      <aside>
+        <h3>Relacionado</h3>
+        <hr />
+
+        <article>
+          <h4>Sobre o PD Market</h4>
+          <p>
+            O <strong>PD Market</strong> é uma plataforma dedicada a levar
+            tecnologia e praticidade ao seu dia a dia, com foco em qualidade e
+            preço justo.
+          </p>
+          <!--
+            <details> cria uma área expansível que pode revelar conteúdo adicional. Aqui está sendo usado para mostrar informações extras sem poluir visualmente o layout.
+          -->
+          <details>
+            <!--
+              <summary> define o título clicável que expande o conteúdo de <details>. Está sendo usado para que o usuário escolha ver mais informações.
+            -->
+            <summary>Saiba mais</summary>
+            <p>
+              Fundado em 2020, o PD Market se destaca por oferecer promoções
+              exclusivas e suporte personalizado.
+            </p>
+          </details>
+        </article>
+        <hr />
+        <article>
+          <h4>Categorias Mais Vendidas</h4>
+          <!--
+            <ol> cria uma lista ordenada. Aqui está sendo usada para indicar classificação/ranqueamento de categorias mais vendidas.
+          -->
+          <ol>
+            <li>Smartphones</li>
+            <li>Notebooks</li>
+            <li>Periféricos</li>
+            <li>Consoles</li>
+            <li>Televisores</li>
+          </ol>
+        </article>
+        <hr />
+        <article>
+          <h4>Glossário PD Market</h4>
+          <!--
+            <dl> define uma lista de descrição (termos e definições). Está sendo usada para explicar palavras comuns ao universo do PD Market.
+          -->
+          <dl>
+            <!--
+              <dt> define um termo dentro da lista de descrição. Aqui representa cada palavra do glossário.
+            -->
+            <dt>Cashback</dt>
+            <!--
+              <dd> define a descrição do termo correspondente. Está sendo usado para explicar o significado de cada termo acima.
+            -->
+            <dd>Parte do valor da compra retornado ao cliente em créditos.</dd>
+            <dt>Frete Grátis</dt>
+            <dd>Promoção válida para compras acima de R$ 199,00.</dd>
+            <dt>Garantia Estendida</dt>
+            <dd>
+              Serviço opcional que amplia o tempo de cobertura do produto.
+            </dd>
+          </dl>
+        </article>
+        <hr />
+      </aside>
     </main>
 
     <footer></footer>
