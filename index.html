@@ -43,7 +43,6 @@
           <li><a href="#contact">Contato</a></li>
         </ul>
       </nav>
-
       <!-- <section> representa uma seção temática da página, usada aqui para o banner principal -->
       <section id="banner">
         <!-- <div> cria um contêiner genérico para agrupar elementos, usado para estruturar o carrossel -->
@@ -167,7 +166,33 @@
           </div>
         </div>
       </section>
-      <section id="message-display"></section>
+      <section id="message-display" aria-labelledby="mascot-message-title">
+        <!-- <h2> define um subtítulo ou título de segundo nível da seção -->
+        <h2 id="mascot-message-title">A Hora é Agora!</h2>
+        <!-- <p> representa um parágrafo de texto -->
+        <p>
+          Olá, cliente! Trago uma mensagem do
+          <!-- <abbr> representa uma abreviação e mostra o significado completo ao passar o mouse -->
+          <abbr title="PD Market">PDM</abbr>
+          e estou aqui para te ajudar a aproveitar as melhores ofertas da
+          <abbr title="Black Friday">BF</abbr>! 😄
+        </p>
+        <p>
+          Nosso gerente sempre diz:
+          <!-- <q> indica uma citação curta dentro do parágrafo, com atributo cite para referência -->
+          <q cite="https://pdmarket.com.br/sobre">
+            <!-- <em> enfatiza o texto, dando destaque semântico (como ênfase ou entonação) -->
+            <em>
+              Queremos levar tecnologia de qualidade a todos, com preços justos
+              e atendimento incrível.
+            </em>
+          </q>
+        </p>
+        <p>
+          Então não perca tempo — confira nossas promoções e encontre o produto
+          perfeito para você!
+        </p>
+      </section>
       <section id="products" aria-labelledby="products-title">
         <h2 id="products-title">Ofertas Especiais</h2>
 

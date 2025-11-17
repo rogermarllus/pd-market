@@ -276,10 +276,16 @@ section {
 }
 
 #message-display {
-  background-color: blue;
-  color: white;
+  background-color: rgb(224, 226, 255);
+  color: rgb(6, 6, 75);
+  border-left: 3px solid darkslateblue;
+  text-align: justify;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+}
+
+#message-display h2 {
+  color: darkslateblue;
 }
 
 #products {
