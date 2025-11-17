@@ -92,8 +92,8 @@ O projeto está publicado e pode ser acessado diretamente através do link:
 Para rodar este projeto localmente, basta clonar o repositório e abrir o arquivo `index.html` no seu navegador de preferência.
 
 ```bash
-# 1. Clone o repositório (substitua pelo seu link)
-git clone [https://github.com/rogermarllus/pd-market.git](https://github.com/rogermarllus/pd-market.git)
+# 1. Clone o repositório
+git clone https://github.com/rogermarllus/pd-market.git
 
 # 2. Navegue até a pasta do projeto
 cd pd-market
