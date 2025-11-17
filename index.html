@@ -17,20 +17,27 @@
       <section id="products" aria-labelledby="products-title">
         <h2 id="products-title">Ofertas Especiais</h2>
 
+        <!-- <form> cria um formulário para envio de dados, usado aqui para filtrar produtos -->
         <form id="product-filter" aria-label="Filtro de produtos">
+          <!-- <select> cria um campo de seleção com múltiplas opções -->
           <select id="categoria" name="categoria">
+            <!-- <option> define cada opção dentro do select -->
             <option value="todas">Todas</option>
             <option value="eletronicos">Eletrônicos</option>
             <option value="informatica">Informática</option>
             <option value="eletrodomesticos">Eletrodomésticos</option>
             <option value="acessorios">Acessórios</option>
           </select>
+          <!-- <button> representa um botão interativo, aqui usado para "aplicar" o filtro (apenas visual) -->
           <button type="submit">Filtrar</button>
         </form>
 
         <div class="product-grid">
+          <!-- <article> representa um conteúdo independente da página, como um card de produto -->
           <article class="product-card">
+            <!-- <figure> agrupa uma mídia e sua legenda -->
             <figure>
+              <!-- <figcaption> fornece uma legenda para a mídia dentro do figure -->
               <img
                 src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
                 alt="Imagem do produto"
@@ -39,14 +46,20 @@
             </figure>
             <h3>Smartphone PD One 128GB</h3>
             <p>
+              <!-- <strong> destaca o texto com forte importância semântica -->
               <strong>R$ 1.799,00</strong>
+              <!-- <small> representa informações secundárias como preço antigo -->
               <small>R$ 2.199,00</small>
+              <!-- <span> é um elemento em linha usado para pequenas marcações de texto -->
               <span>ou 10x de R$ 179,90</span>
             </p>
             <span class="promo-info">
-              <mark>Oferta</mark> •
+              <!-- <mark> destaca visualmente uma parte do texto como importante -->
+              <mark>Oferta</mark>
+              <!-- <time> representa datas/horários em formato semântico reconhecível -->
               <time datetime="2025-11-30">até 30/11</time>
             </span>
+            <!-- <label> ligado a um input; aqui funciona como botão para abrir o modal -->
             <label
               for="generic-modal-toggle"
               class="open-modal"
