@@ -1,41 +1,34 @@
-<!-- <!DOCTYPE html> declara ao navegador que este arquivo usa a versão HTML5 -->
 <!DOCTYPE html>
-<!-- <html> é o elemento raiz que engloba toda a estrutura da página -->
 <html lang="pt-BR">
-  <!-- <head> contém metadados e configurações que não aparecem diretamente na página -->
   <head>
-    <!-- <meta charset="UTF-8"> define o padrão de caracteres usado, permitindo acentos -->
     <meta charset="UTF-8" />
-    <!-- <meta name="viewport"> ajusta a página para funcionar bem em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <base> define um caminho base para todos os links e recursos relativos da página -->
-    <base href="/" />
-    <!-- <title> define o título da aba do navegador -->
     <title>PD Market</title>
-    <!-- <link> conecta o HTML a um arquivo CSS externo -->
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      main {
+        background-color: lightgray;
+      }
+    </style>
+    <script>
+      // Script...
+    </script>
+    <base href="/" />
   </head>
   <body>
-    <!-- <header> representa o cabeçalho da página ou seção, geralmente contendo logo ou título -->
     <header>
-      <!-- <img> insere uma imagem na página, usada aqui para mostrar o logotipo -->
       <img src="img/logo.png" alt="Logo do PD Market" />
-      <!-- <h1> define o título principal da página -->
       <h1>PD Market</h1>
     </header>
 
     <main>
-      <!-- <nav> representa a área de navegação da página, contendo links para outras seções -->
       <nav>
-        <!-- <h4> define um subtítulo ou cabeçalho de seção em nível 4 -->
         <h4>Navegação</h4>
-        <!-- <hr> cria uma linha horizontal usada aqui para separar visualmente o título dos links -->
         <hr />
-        <!-- <ul> cria uma lista não ordenada, usada aqui para listar os itens do menu -->
         <ul>
-          <!-- <li> representa um item da lista -->
-          <!-- <a> cria um link clicável para navegar para outras partes da página -->
-          <li><a href="#banner">Início</a></li>
+          <li>
+            <a href="#banner">Início</a>
+          </li>
           <li><a href="#products">Produtos</a></li>
           <li><a href="#reviews">Avaliações</a></li>
           <li><a href="#media">Social</a></li>
@@ -43,11 +36,8 @@
           <li><a href="#contact">Contato</a></li>
         </ul>
       </nav>
-      <!-- <section> representa uma seção temática da página, usada aqui para o banner principal -->
       <section id="banner">
-        <!-- <div> cria um contêiner genérico para agrupar elementos, usado para estruturar o carrossel -->
         <div class="carousel-wrapper">
-          <!-- <input> cria campos interativos; aqui usado como botões de rádio para trocar os slides -->
           <input
             type="radio"
             name="slide"
@@ -60,25 +50,20 @@
           <input type="radio" name="slide" id="slide4" class="slide-input" />
           <div class="slides-container">
             <div class="slide">
-              <!-- <picture> permite carregar imagens diferentes dependendo do tamanho da tela -->
               <picture>
-                <!-- <source> define versões alternativas da imagem para diferentes resoluções -->
                 <source
                   media="(min-width: 800px)"
                   srcset="
                     https://placehold.co/1200x500/003366/FFFFFF?text=Slide+1
                   "
                 />
-                <!-- <img> insere a imagem principal exibida no slide -->
                 <img
                   src="https://placehold.co/800x500/003366/FFFFFF?text=Slide+1"
                   alt="Banner promocional 1"
                 />
               </picture>
               <div class="slide-content">
-                <!-- <h2> define um título de nível 2, usado como manchete do slide -->
                 <h2>Promoção de Inverno</h2>
-                <!-- <a> cria um link clicável, usado aqui como botão de chamada para ação -->
                 <a href="#" class="cta">Ver ofertas</a>
               </div>
             </div>
@@ -140,7 +125,6 @@
             </div>
           </div>
           <div class="nav-dots">
-            <!-- <label> associa um rótulo clicável a um input; aqui serve como botão visual do carrossel -->
             <label
               for="slide1"
               class="dot"
@@ -165,21 +149,16 @@
         </div>
       </section>
       <section id="message-display" aria-labelledby="mascot-message-title">
-        <!-- <h2> define um subtítulo ou título de segundo nível da seção -->
         <h2 id="mascot-message-title">A Hora é Agora!</h2>
-        <!-- <p> representa um parágrafo de texto -->
         <p>
           Olá, cliente! Trago uma mensagem do
-          <!-- <abbr> representa uma abreviação e mostra o significado completo ao passar o mouse -->
           <abbr title="PD Market">PDM</abbr>
           e estou aqui para te ajudar a aproveitar as melhores ofertas da
           <abbr title="Black Friday">BF</abbr>! 😄
         </p>
         <p>
           Nosso gerente sempre diz:
-          <!-- <q> indica uma citação curta dentro do parágrafo, com atributo cite para referência -->
           <q cite="https://pdmarket.com.br/sobre">
-            <!-- <em> enfatiza o texto, dando destaque semântico (como ênfase ou entonação) -->
             <em>
               Queremos levar tecnologia de qualidade a todos, com preços justos
               e atendimento incrível.
@@ -194,27 +173,20 @@
       <section id="products" aria-labelledby="products-title">
         <h2 id="products-title">Ofertas Especiais</h2>
 
-        <!-- <form> cria um formulário para envio de dados, usado aqui para filtrar produtos -->
         <form id="product-filter" aria-label="Filtro de produtos">
-          <!-- <select> cria um campo de seleção com múltiplas opções -->
           <select id="categoria" name="categoria">
-            <!-- <option> define cada opção dentro do select -->
             <option value="todas">Todas</option>
             <option value="eletronicos">Eletrônicos</option>
             <option value="informatica">Informática</option>
             <option value="eletrodomesticos">Eletrodomésticos</option>
             <option value="acessorios">Acessórios</option>
           </select>
-          <!-- <button> representa um botão interativo, aqui usado para "aplicar" o filtro (apenas visual) -->
           <button type="submit">Filtrar</button>
         </form>
 
         <div class="product-grid">
-          <!-- <article> representa um conteúdo independente da página, como um card de produto -->
           <article class="product-card">
-            <!-- <figure> agrupa uma mídia e sua legenda -->
             <figure>
-              <!-- <figcaption> fornece uma legenda para a mídia dentro do figure -->
               <img
                 src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
                 alt="Imagem do produto"
@@ -223,20 +195,14 @@
             </figure>
             <h3>Smartphone PD One 128GB</h3>
             <p>
-              <!-- <strong> destaca o texto com forte importância semântica -->
               <strong>R$ 1.799,00</strong>
-              <!-- <small> representa informações secundárias como preço antigo -->
               <small>R$ 2.199,00</small>
-              <!-- <span> é um elemento em linha usado para pequenas marcações de texto -->
               <span>ou 10x de R$ 179,90</span>
             </p>
             <span class="promo-info">
-              <!-- <mark> destaca visualmente uma parte do texto como importante -->
               <mark>Oferta</mark>
-              <!-- <time> representa datas/horários em formato semântico reconhecível -->
               <time datetime="2025-11-30">até 30/11</time>
             </span>
-            <!-- <label> ligado a um input; aqui funciona como botão para abrir o modal -->
             <label
               for="generic-modal-toggle"
               class="open-modal"
@@ -1094,13 +1060,10 @@
       </section>
       <section id="reviews">
         <h2>Avaliações</h2>
-        <hr />
         <article>
           <h3>Excelente!</h3>
           <div class="rating">
-            <!-- <svg> é usado para exibir gráficos vetoriais escaláveis diretamente no HTML -->
             <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-              <!-- <path> define formas dentro do SVG usando coordenadas vetoriais -->
               <path
                 fill="#ebc807"
                 d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.729 1.516 8.312L12 18.896l-7.452 4.451 1.516-8.312L0 9.306l8.332-1.151z"
@@ -1131,14 +1094,12 @@
               />
             </svg>
           </div>
-          <!-- <blockquote> representa uma citação longa ou destacada, foi usada para representar a avaliação do usuário -->
           <blockquote>
             <p>
               "O site é muito intuitivo e fácil de navegar. Fiz minha compra em
               poucos minutos e recebi tudo direitinho.
               <em>Com certeza comprarei novamente!</em>"
             </p>
-            <!-- <cite> indica a fonte ou autor da citação, nesse caso, o usuário que realizou a avaliação -->
             <cite>
               <img
                 class="icon-user"
@@ -1149,7 +1110,6 @@
             </cite>
           </blockquote>
         </article>
-        <hr />
         <article>
           <h3>Muito bom!</h3>
           <div class="rating">
@@ -1199,7 +1159,6 @@
             >
           </blockquote>
         </article>
-        <hr />
         <article>
           <h3>Incrível!</h3>
           <div class="rating">
@@ -1258,11 +1217,8 @@
             Aproveite esta seleção de vídeos e músicas que a PD Market
             selecionou especialmente para você!
           </p>
-          <!-- <video> insere um player de vídeo nativo no site -->
           <video autoplay loop muted width="480" poster="img/video-poster.jpg">
             <source src="video/video.mp4" type="video/mp4" />
-            <!-- <track> adiciona legendas, capítulos ou descrições ao vídeo -->
-            <!-- Não há arquivo de legenda -->
             <track
               src="video/legenda.vtt"
               kind="subtitles"
@@ -1272,25 +1228,23 @@
             Seu navegador não suporta o elemento de vídeo.
           </video>
 
-          <!-- <audio> insere um player de áudio nativo -->
           <audio controls autoplay loop muted>
             <source src="audio/audio.mp3" type="audio/mpeg" />
             Seu navegador não suporta o elemento de áudio.
           </audio>
 
-          <!-- <canvas> cria uma área gráfica desenhada via JavaScript -->
           <canvas id="promoCanvas" width="600" height="300"> </canvas>
           <p>Futuramente você verá o novo mascote <u>aqui</u></p>
 
           <figure>
             <img
               src='data:image/svg+xml;utf8,
-              <svg xmlns="http://www.w3.org/2000/svg" width="480" height="300">
-                <rect width="100%" height="100%" fill="%23f7f7f7" stroke="%23dcdcdc" rx="8" ry="8"/>
-                <text x="50%" y="50%" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="%23888" text-anchor="middle" dominant-baseline="middle">
-                  PLACEHOLDER
-                </text>
-              </svg>'
+                  <svg xmlns="http://www.w3.org/2000/svg" width="480" height="300">
+                    <rect width="100%" height="100%" fill="%23f7f7f7" stroke="%23dcdcdc" rx="8" ry="8"/>
+                    <text x="50%" y="50%" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="%23888" text-anchor="middle" dominant-baseline="middle">
+                      PLACEHOLDER
+                    </text>
+                  </svg>'
               alt="Mapa ilustrativo da loja PD Market com áreas clicáveis"
               usemap="#store-map"
               width="480"
@@ -1302,9 +1256,7 @@
                 height: 300px;
               "
             />
-            <!-- <map> cria um mapa de áreas clicáveis em uma imagem -->
             <map name="store-map">
-              <!-- <area> define regiões clicáveis dentro de um <map> -->
               <area
                 shape="rect"
                 coords="10,10,120,120"
@@ -1323,16 +1275,13 @@
               <i>Explore nossas seções e descubra ofertas exclusivas.</i>
             </figcaption>
           </figure>
-          <!-- <embed> incorpora conteúdo externo diretamente na página -->
           <embed
             src="https://www.youtube.com/embed/KwFrvsnxPW0"
             width="480"
             height="270"
             title="Vídeo externo incorporado"
           />
-          <!-- <object> incorpora arquivos externos, podendo conter fallback interno -->
           <object data="img/object-img.webp" width="400" height="300">
-            <!-- <param> configura opções específicas dentro de um <object> -->
             <param name="loop" value="false" />
             Seu navegador não suporta o formato incorporado.
           </object>
@@ -1341,32 +1290,23 @@
       <section id="monthly-data" aria-labelledby="monthly-title">
         <h2 id="monthly-title">Dados do Mês — Novembro de 2025</h2>
 
-        <!-- <table> cria uma estrutura organizada para apresentar dados tabulares; aqui ela mostra as métricas mensais da loja -->
         <table>
-          <!-- <caption> descreve o propósito da tabela -->
           <caption>
             Métricas de desempenho da PD Market
           </caption>
 
-          <!-- <thead> agrupa o cabeçalho da tabela; usado para organizar e diferenciar os títulos das colunas -->
           <thead>
-            <!-- <tr> representa uma linha da tabela; nesta linha estão os títulos das colunas -->
             <tr>
-              <!-- <th> são células de cabeçalho; indicam o rótulo de cada coluna da tabela -->
               <th>Métrica</th>
               <th>Valor</th>
               <th>Desempenho</th>
             </tr>
           </thead>
 
-          <!-- <tbody> agrupa as linhas de dados principais da tabela; usado para separar o conteúdo do cabeçalho e do rodapé -->
           <tbody>
             <tr>
-              <!-- <td> define células comuns de dados; aqui descrevem cada métrica e seus valores -->
               <td>Pedidos entregues no prazo</td>
               <td>95%</td>
-
-              <!-- <meter> mostra visualmente um valor dentro de um intervalo; usado para representar desempenho de forma clara e acessível -->
               <td>
                 <meter value="0.95" min="0" max="1" optimum="1">95%</meter>
               </td>
@@ -1389,11 +1329,9 @@
             </tr>
           </tbody>
 
-          <!-- <tfoot> agrupa o rodapé da tabela; aqui é usado para destacar um resumo ou total -->
           <tfoot>
             <tr>
               <td colspan="2"><strong>Total de Vendas Processadas:</strong></td>
-              <!-- <output> representa um valor calculado ou gerado; usado aqui para exibir a quantidade total de vendas -->
               <td>
                 <output name="vendas">3.200</output>
               </td>
@@ -1401,41 +1339,36 @@
           </tfoot>
         </table>
 
-        <!-- <h3> cria um subtítulo; usado para introduzir o gráfico de progresso abaixo -->
         <h3>Tendência de Crescimento</h3>
 
-        <p>
+        <p style="color: #eee">
           Estamos em constante expansão! Nosso volume de vendas e satisfação dos
           clientes tem apresentado crescimento contínuo, demonstrando a
           confiança do público na <strong>PD Market</strong>.
         </p>
 
-        <!-- <progress> exibe visualmente o progresso rumo a uma meta; aqui representa o alcance da meta de crescimento -->
         <progress value="70" max="100">70%</progress>
         <p><small>Meta mensal de crescimento: 70% atingido</small></p>
       </section>
       <section id="contact">
         <h2>Entre em Contato</h2>
 
-        <!--
-          <form> cria um formulário interativo para envio de dados. Aqui está sendo usado para permitir que o cliente entre em contato.
-        -->
         <form action="#" method="post">
-          <!--
-            <fieldset> agrupa campos relacionados dentro de um formulário. Foi usado para organizar visualmente e semanticamente todos os inputs da mensagem.
-          -->
           <fieldset>
-            <!--
-              <legend> define um título para o grupo de campos dentro do fieldset. Está sendo usado para identificar claramente o propósito do formulário.
-            -->
             <legend>Envie-nos uma mensagem</legend>
             <label for="nome">Nome completo:</label>
+            <datalist id="sugestoes-nome">
+              <option value="Ana Silva"></option>
+              <option value="Bruno Costa"></option>
+              <option value="Carla Dias"></option>
+            </datalist>
             <input
               type="text"
               id="nome"
               name="nome"
               placeholder="Digite seu nome"
               required
+              list="sugestoes-nome"
             />
 
             <label for="email">E-mail:</label>
@@ -1446,18 +1379,9 @@
               placeholder="seuemail@exemplo.com"
               required
             />
-            <!--
-              <select> cria uma lista suspensa de opções. Está sendo usado para o cliente escolher o tipo de assunto.
-            -->
             <label for="assunto">Assunto:</label>
             <select id="assunto" name="assunto">
-              <!--
-                <optgroup> agrupa opções dentro de um select. Usado para organizar visualmente "Suporte" e "Outros".
-              -->
               <optgroup label="Suporte">
-                <!--
-                  <option> representa uma opção dentro do select.
-                -->
                 <option value="duvida">Dúvida</option>
                 <option value="problema">Problema técnico</option>
               </optgroup>
@@ -1468,9 +1392,6 @@
             </select>
 
             <label for="mensagem">Mensagem:</label>
-            <!--
-              <textarea> cria uma área de texto multilinhas. Usado porque mensagens costumam ser longas e precisam de mais espaço.
-            -->
             <textarea
               id="mensagem"
               name="mensagem"
@@ -1479,16 +1400,10 @@
               required
             ></textarea>
 
-            <!--
-              <button> cria um botão clicável. Aqui está sendo usado para enviar o formulário.
-            -->
             <button type="submit">Enviar Mensagem</button>
           </fieldset>
         </form>
       </section>
-      <!--
-        <aside> representa conteúdo complementar ao conteúdo principal. Aqui está sendo usado para mostrar informações extras relacionadas ao PD Market.
-      -->
       <aside>
         <h3>Relacionado</h3>
         <hr />
@@ -1500,13 +1415,7 @@
             tecnologia e praticidade ao seu dia a dia, com foco em qualidade e
             preço justo.
           </p>
-          <!--
-            <details> cria uma área expansível que pode revelar conteúdo adicional. Aqui está sendo usado para mostrar informações extras sem poluir visualmente o layout.
-          -->
           <details>
-            <!--
-              <summary> define o título clicável que expande o conteúdo de <details>. Está sendo usado para que o usuário escolha ver mais informações.
-            -->
             <summary>Saiba mais</summary>
             <p>
               Fundado em 2020, o PD Market se destaca por oferecer promoções
@@ -1515,11 +1424,13 @@
           </details>
         </article>
         <hr />
+        <h5>Nossas Marcas</h5>
+        <p>Trabalhamos com as marcas líderes do mercado.</p>
+        <h6>Detalhes de Garantia</h6>
+        <p>Todos os produtos PD Market têm garantia de 1 ano.</p>
+        <hr />
         <article>
-          <h4>Categorias Mais Vendidas</h4>
-          <!--
-            <ol> cria uma lista ordenada. Aqui está sendo usada para indicar classificação/ranqueamento de categorias mais vendidas.
-          -->
+          <h4>Mais Vendidos</h4>
           <ol>
             <li>Smartphones</li>
             <li>Notebooks</li>
@@ -1531,17 +1442,8 @@
         <hr />
         <article>
           <h4>Glossário PD Market</h4>
-          <!--
-            <dl> define uma lista de descrição (termos e definições). Está sendo usada para explicar palavras comuns ao universo do PD Market.
-          -->
           <dl>
-            <!--
-              <dt> define um termo dentro da lista de descrição. Aqui representa cada palavra do glossário.
-            -->
             <dt>Cashback</dt>
-            <!--
-              <dd> define a descrição do termo correspondente. Está sendo usado para explicar o significado de cada termo acima.
-            -->
             <dd>Parte do valor da compra retornado ao cliente em créditos.</dd>
             <dt>Frete Grátis</dt>
             <dd>Promoção válida para compras acima de R$ 199,00.</dd>
@@ -1555,15 +1457,10 @@
       </aside>
     </main>
 
-    <!--
-      <footer> representa o rodapé da página ou seção. Aqui está sendo usado para exibir informações finais e forma de contato.
-    -->
     <footer>
-      <!--
-        <address> indica informações de contato do autor ou da organização.
-      -->
       <address>
-        Entre em contato:
+        <b>Entre em contato:</b>
+        <br />
         <a href="mailto:contato@pdmarket.com"> contato@pdmarket.com</a>
       </address>
 
