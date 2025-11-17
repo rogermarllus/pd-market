@@ -1414,8 +1414,78 @@
         <progress value="70" max="100">70%</progress>
         <p><small>Meta mensal de crescimento: 70% atingido</small></p>
       </section>
-      <section id="contact"></section>
+      <section id="contact">
+        <h2>Entre em Contato</h2>
 
+        <!--
+          <form> cria um formulário interativo para envio de dados. Aqui está sendo usado para permitir que o cliente entre em contato.
+        -->
+        <form action="#" method="post">
+          <!--
+            <fieldset> agrupa campos relacionados dentro de um formulário. Foi usado para organizar visualmente e semanticamente todos os inputs da mensagem.
+          -->
+          <fieldset>
+            <!--
+              <legend> define um título para o grupo de campos dentro do fieldset. Está sendo usado para identificar claramente o propósito do formulário.
+            -->
+            <legend>Envie-nos uma mensagem</legend>
+            <label for="nome">Nome completo:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seuemail@exemplo.com"
+              required
+            />
+            <!--
+              <select> cria uma lista suspensa de opções. Está sendo usado para o cliente escolher o tipo de assunto.
+            -->
+            <label for="assunto">Assunto:</label>
+            <select id="assunto" name="assunto">
+              <!--
+                <optgroup> agrupa opções dentro de um select. Usado para organizar visualmente "Suporte" e "Outros".
+              -->
+              <optgroup label="Suporte">
+                <!--
+                  <option> representa uma opção dentro do select.
+                -->
+                <option value="duvida">Dúvida</option>
+                <option value="problema">Problema técnico</option>
+              </optgroup>
+              <optgroup label="Outros">
+                <option value="sugestao">Sugestão</option>
+                <option value="elogio">Elogio</option>
+              </optgroup>
+            </select>
+
+            <label for="mensagem">Mensagem:</label>
+            <!--
+              <textarea> cria uma área de texto multilinhas. Usado porque mensagens costumam ser longas e precisam de mais espaço.
+            -->
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="5"
+              placeholder="Digite sua mensagem aqui..."
+              required
+            ></textarea>
+
+            <!--
+              <button> cria um botão clicável. Aqui está sendo usado para enviar o formulário.
+            -->
+            <button type="submit">Enviar Mensagem</button>
+          </fieldset>
+        </form>
+      </section>
       <!--
         <aside> representa conteúdo complementar ao conteúdo principal. Aqui está sendo usado para mostrar informações extras relacionadas ao PD Market.
       -->
