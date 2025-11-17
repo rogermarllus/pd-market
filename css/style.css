@@ -24,9 +24,12 @@ h3 {
   color: #eee;
 }
 
-h4 {
+h4,
+h5,
+h6 {
   color: #eee;
   font-size: 1.2rem;
+  margin-top: 10px;
   margin-bottom: 5px;
 }
 
