@@ -195,7 +195,12 @@
       <section id="products" aria-labelledby="products-title">
         <h2 id="products-title">Ofertas Especiais</h2>
         <!-- <form> cria um formulário para envio de dados, usado aqui para filtrar produtos (apenas visual) -->
-        <form id="product-filter" aria-label="Filtro de produtos">
+        <form
+          id="product-filter"
+          aria-label="Filtro de produtos"
+          method="get"
+          action="#"
+        >
           <!-- <select> cria um campo de seleção com múltiplas opções -->
           <select id="categoria" name="categoria">
             <!-- <option> define cada opção dentro do select -->
@@ -274,7 +279,7 @@
               <img src="img/products/prod03.jpg" alt="Imagem do produto" />
               <figcaption>Notebook Pro X 512GB</figcaption>
             </figure>
-            <h3>Notebook Pro X+ 512GB</h3>
+            <h3>Notebook Pro X Plus 512GB</h3>
             <p>
               <strong>R$ 4.899,00</strong>
               <small>R$ 5.999,00</small>
@@ -322,9 +327,9 @@
           <article class="product-card">
             <figure>
               <img src="img/products/prod05.jpg" alt="Imagem do produto" />
-              <figcaption>Cafeteira Expressa Auto</figcaption>
+              <figcaption>Cafeteira Expressa Automática</figcaption>
             </figure>
-            <h3>Cafeteira Expressa Auto</h3>
+            <h3>Cafeteira Expressa Automática</h3>
             <p>
               <strong>R$ 499,90</strong>
               <small>R$ 699,90</small>
@@ -597,9 +602,9 @@
           <article class="product-card">
             <figure>
               <img src="img/products/prod16.jpg" alt="Imagem do produto" />
-              <figcaption>Batedeira Planetária 700W</figcaption>
+              <figcaption>Batedeira Planet 700W</figcaption>
             </figure>
-            <h3>Batedeira Planetária 700W</h3>
+            <h3>Batedeira Planet 700W</h3>
             <p>
               <strong>R$ 599,00</strong>
               <small>R$ 849,00</small>
@@ -672,9 +677,9 @@
           <article class="product-card">
             <figure>
               <img src="img/products/prod19.jpg" alt="Imagem do produto" />
-              <figcaption>Roteador Mesh Wifi 6</figcaption>
+              <figcaption>Roteador MeshLinked Wifi 6</figcaption>
             </figure>
-            <h3>Roteador MeshLink Wifi 6</h3>
+            <h3>Roteador MeshLinked Wifi 6</h3>
             <p>
               <strong>R$ 899,00</strong>
               <small>R$ 1.299,00</small>
@@ -747,9 +752,9 @@
           <article class="product-card">
             <figure>
               <img src="img/products/prod22.jpg" alt="Imagem do produto" />
-              <figcaption>Webcam 4K Pro</figcaption>
+              <figcaption>Webcam 4K Pro Plus</figcaption>
             </figure>
-            <h3>Webcam 4K 60fps Pro+</h3>
+            <h3>Webcam 4K 60fps Pro Plus</h3>
             <p>
               <strong>R$ 749,00</strong>
               <small>R$ 1.099,00</small>
@@ -822,9 +827,9 @@
           <article class="product-card">
             <figure>
               <img src="img/products/prod25.jpg" alt="Imagem do produto" />
-              <figcaption>Impressora Multi Tanque</figcaption>
+              <figcaption>Impressora PD Multi Tanque</figcaption>
             </figure>
-            <h3>Impressora Multi Tanque</h3>
+            <h3>Impressora PD Multi Tanque</h3>
             <p>
               <strong>R$ 1.099,00</strong>
               <small>R$ 1.499,00</small>
@@ -947,9 +952,9 @@
           <article class="product-card">
             <figure>
               <img src="img/products/prod30.jpg" alt="Imagem do produto" />
-              <figcaption>Luminária Smart RGB</figcaption>
+              <figcaption>Luminária PDLight Smart RGB</figcaption>
             </figure>
-            <h3>Luminária PD Smart RGB</h3>
+            <h3>Luminária PDLight Smart RGB</h3>
             <p>
               <strong>R$ 229,90</strong>
               <small>R$ 349,90</small>
@@ -1387,9 +1392,44 @@
               required
             ></textarea>
 
-            <button type="submit">Enviar Mensagem</button>
+            <label
+              for="contact-modal-toggle"
+              class="open-modal"
+              role="button"
+              style="color: #fafafa"
+              >Enviar Mensagem</label
+            >
           </fieldset>
         </form>
+        <input
+          type="checkbox"
+          id="contact-modal-toggle"
+          class="modal-toggle"
+          hidden
+        />
+
+        <div
+          class="modal"
+          id="contact-modal"
+          role="dialog"
+          aria-labelledby="contact-modal-title"
+        >
+          <label for="contact-modal-toggle" class="overlay"></label>
+
+          <div class="modal-content">
+            <h3 id="contact-modal-title">Mensagem Enviada</h3>
+            <hr />
+            <p>Obrigado! Sua mensagem foi enviada com sucesso.</p>
+
+            <label
+              for="contact-modal-toggle"
+              class="modal-close-button"
+              role="button"
+              style="color: #fafafa"
+              >Fechar</label
+            >
+          </div>
+        </div>
       </section>
       <!--
         <aside> representa conteúdo complementar ao conteúdo principal. Aqui está sendo usado para mostrar informações extras relacionadas ao PD Market.
