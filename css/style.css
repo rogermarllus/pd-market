@@ -1,3 +1,12 @@
+:root {
+  --text: #212121;
+  --text-light: #fafafa;
+  --text-hover: #666;
+  --text-secondary: #333;
+  --bg: #fafafa;
+  --bg-dark: #212121;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,16 +29,16 @@ h1 {
 }
 
 h3 {
-  color: #eee;
+  color: var(--text);
 }
 
 h4,
 h5,
 h6 {
-  color: #eee;
+  color: var(--text);
   font-size: 1.2rem;
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 hr {
@@ -50,40 +59,40 @@ blockquote p {
 }
 
 section {
-  background-color: darkslateblue;
+  background-color: var(--bg);
   padding: 20px;
   text-align: center;
-  color: #eee;
-  border-radius: 12px;
+  color: var(--text);
+  border-radius: 3px;
 }
 
 details {
   margin-top: 10px;
-  background-color: rgb(53, 46, 100);
+  background-color: #eee;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 details p {
-  color: #eee;
+  color: var(--text-secondary);
   margin-top: 5px;
 }
 
 summary {
-  color: lightblue;
+  color: var(--text);
   font-weight: bold;
 }
 
 summary:hover {
   cursor: pointer;
-  transition: 0.1s;
-  color: #eee;
+  transition: 0.2s;
+  color: var(--text-hover);
 }
 
 dt {
   font-weight: bold;
   font-style: italic;
-  color: lightblue;
+  color: var(--text);
   margin-top: 10px;
   position: relative;
 }
@@ -91,7 +100,7 @@ dt {
 dd {
   margin-left: 15px;
   margin-bottom: 8px;
-  color: #eee;
+  color: var(--text-secondary);
   line-height: 1.4;
 }
 
@@ -103,9 +112,8 @@ button[type="submit"],
   display: inline-block;
   padding: 0.6rem 1.2rem;
   font-size: 0.95rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: darkcyan;
+  color: var(--text-light);
+  background-color: var(--bg-dark);
   border: none;
   border-radius: 6px;
   text-decoration: none;
@@ -119,13 +127,12 @@ button[type="submit"],
 #product-filter button:hover,
 button[type="submit"]:hover,
 .modal-content label:hover {
-  background-color: lightblue;
-  color: darkslateblue;
+  background-color: black;
 }
 
 header {
-  background-color: darkslateblue;
-  color: white;
+  background-color: var(--bg);
+  color: var(--text);
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -140,9 +147,9 @@ header img {
 }
 
 footer {
-  background-color: darkslateblue;
-  color: white;
-  padding: 20px;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,8 +157,14 @@ footer {
 }
 
 footer a {
-  color: lightblue;
+  color: var(--text-secondary);
+  font-weight: bold;
   text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--text-hover);
+  transition: 0.1s;
 }
 
 footer address {
@@ -164,17 +177,18 @@ main {
   grid-template-columns: 1fr 3fr 1fr;
   grid-auto-rows: minmax(100px, auto);
   gap: 10px;
-  background-color: lightgray;
+  background-color: white;
   padding: 10px;
+  box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.1) inset;
 }
 
 nav {
-  background-color: darkslateblue;
+  background-color: var(--bg);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   grid-column: 1 / 2;
   grid-row: 1 / 8;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 3px;
 }
 
 nav ul {
@@ -186,7 +200,7 @@ nav li {
 }
 
 nav a {
-  color: lightblue;
+  color: var(--text-secondary);
   text-decoration: none;
   font-weight: bold;
 }
@@ -194,23 +208,27 @@ nav a {
 nav a:hover {
   cursor: pointer;
   transition: 0.1s;
-  color: #eee;
+  color: var(--text-hover);
 }
 
 aside {
-  background-color: darkslateblue;
+  background-color: var(--bg);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   grid-column: 3 / 4;
   grid-row: 1 / 8;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 3px;
 }
 
 aside article {
   text-align: justify;
   margin-top: 15px;
+  margin-bottom: 25px;
+  color: var(--text);
+}
+
+aside p {
   margin-bottom: 15px;
-  color: #eee;
 }
 
 aside details[open] > *:not(summary) {
@@ -222,7 +240,8 @@ aside details[open] > *:not(summary) {
   grid-row: 1 / 2;
   overflow: hidden;
   padding: 0;
-  border-radius: 10px;
+  border-radius: 3px;
+  border: 1px solid var(--bg-dark);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -300,15 +319,14 @@ aside details[open] > *:not(summary) {
   width: 12px;
   height: 12px;
   margin: 0 6px;
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--bg-dark);
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 .dot:hover {
-  background-color: white;
+  background-color: var(--bg-dark);
 }
 
 #slide1:checked ~ .slides-container {
@@ -343,42 +361,45 @@ aside details[open] > *:not(summary) {
 #slide2:checked ~ .nav-dots label[for="slide2"],
 #slide3:checked ~ .nav-dots label[for="slide3"],
 #slide4:checked ~ .nav-dots label[for="slide4"] {
-  background-color: white;
-  border-color: cyan;
+  border: 2px solid var(--bg-dark);
 }
 
 #slide1:focus-visible ~ .nav-dots label[for="slide1"],
 #slide2:focus-visible ~ .nav-dots label[for="slide2"],
 #slide3:focus-visible ~ .nav-dots label[for="slide3"],
 #slide4:focus-visible ~ .nav-dots label[for="slide4"] {
-  outline: 3px solid cyan;
+  outline: 3px solid var(--text-hover);
   outline-offset: 2px;
 }
 
 #message-display {
-  background-color: rgb(224, 226, 255);
-  color: rgb(6, 6, 75);
-  border-left: 3px solid darkslateblue;
+  background-color: #eee;
+  color: var(--text);
+  border-left: 10px solid var(--text);
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
+  border-right: 1px solid var(--text);
   text-align: justify;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  border-radius: 0px;
+  border-radius: 3px;
   padding: 20px;
 }
 
 #message-display h2 {
-  color: darkslateblue;
+  color: var(--text);
+  margin-bottom: 10px;
 }
 
 #products {
-  background: darkslateblue;
+  background: var(--bg);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 3px;
 }
 
 #products h2 {
-  color: #eee;
+  color: var(--text);
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
@@ -414,15 +435,15 @@ aside details[open] > *:not(summary) {
 }
 
 .product-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1rem;
+  background: var(--bg);
+  border-radius: 3px;
+  padding: 0.8rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.3s;
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -433,18 +454,20 @@ aside details[open] > *:not(summary) {
 
 .product-card img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 3px;
   object-fit: cover;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
 }
 
 .product-card figcaption {
   font-size: 0.7rem;
-  color: #666;
+  color: var(--text-secondary);
   margin-top: 0.3rem;
 }
 
 .product-card h3 {
-  color: darkslategrey;
+  color: var(--text);
   font-size: 1.1rem;
   margin: 0.8rem 0;
 }
@@ -456,7 +479,7 @@ aside details[open] > *:not(summary) {
 .product-card strong {
   display: block;
   font-size: 1.2rem;
-  color: #008000;
+  color: green;
 }
 
 .product-card small {
@@ -468,38 +491,37 @@ aside details[open] > *:not(summary) {
 .product-card p span {
   display: block;
   font-size: 0.85rem;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .promo-info {
   display: block;
   margin: 0.5rem 0;
   font-size: 0.85rem;
-  color: #333;
+  color: var(--text);
 }
 
 .promo-info mark {
-  background: #ff5050;
-  color: #fff;
+  background: yellow;
+  color: var(--bg-dark);
   padding: 0.1rem 0.4rem;
-  border-radius: 4px;
+  border-radius: 3px;
   font-weight: bold;
 }
 
 .promo-info time {
-  color: #555;
+  color: #444;
 }
 
 .open-modal {
   display: block;
   width: 100%;
   margin-top: 0.8rem;
-  background: darkslategrey;
+  background: var(--bg-dark);
 }
 
 .open-modal:hover {
-  background: darkcyan;
-  color: #fff;
+  background: black;
 }
 
 .modal {
@@ -517,9 +539,9 @@ aside details[open] > *:not(summary) {
 }
 
 .modal-content {
-  background: #fff;
+  background: var(--bg);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 3px;
   max-width: 400px;
   text-align: left;
   position: relative;
@@ -527,24 +549,23 @@ aside details[open] > *:not(summary) {
 }
 
 .modal-content h3 {
-  color: darkslategrey;
+  color: var(--text);
   margin-bottom: 5px;
 }
 
 .modal-content p {
   margin-top: 5px;
-  color: darkslategray;
+  color: var(--text);
 }
 
 .modal-content label {
   margin-top: 1rem;
-  background: darkslategrey;
+  background: var(--bg-dark);
 }
 
 .modal-content label:hover {
-  background: #2e5a5a;
-  color: #fff;
-  transform: translateY(-2px);
+  background: black;
+  transition: 0.1s;
 }
 
 .overlay {
@@ -554,32 +575,31 @@ aside details[open] > *:not(summary) {
 }
 
 #reviews {
-  background-color: darkslateblue;
+  background-color: var(--bg);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  color: #eee;
+  color: var(--text);
   grid-column: 2 / 3;
   grid-row: 4 / 5;
   text-align: left;
 }
 
 #reviews h2 {
-  color: #eee;
+  color: var(--text);
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
 #reviews article {
   margin-top: 1rem;
-  background-color: rgb(53, 46, 100);
-  border-radius: 8px;
+  background-color: var(--bg);
+  border-radius: 3px;
   padding: 1.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .rating {
-  margin-top: 0;
+  margin-top: 10px;
   margin-bottom: 0.75rem;
-  color: #f39c12;
   font-size: 1.1rem;
 }
 
@@ -587,9 +607,9 @@ aside details[open] > *:not(summary) {
   margin-top: 5px;
   margin-bottom: 1rem;
   font-style: italic;
-  color: #ddd;
+  color: var(--text-secondary);
   padding-left: 1rem;
-  border-left: 3px solid darkcyan;
+  border-left: 3px solid var(--bg-dark);
 }
 
 .icon-user {
@@ -598,7 +618,7 @@ aside details[open] > *:not(summary) {
 }
 
 cite {
-  color: lightblue;
+  color: var(--text);
   font-weight: bold;
   display: flex;
   flex-direction: row;
@@ -607,15 +627,15 @@ cite {
 }
 
 #media {
-  background-color: darkslateblue;
+  background-color: var(--bg);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   padding: 20px;
-  border-radius: 6px;
+  border-radius: 3px;
   text-align: center;
 }
 
 #media h2 {
-  color: #eee;
+  color: var(--text);
   margin-bottom: 15px;
   font-size: 1.8em;
 }
@@ -628,13 +648,13 @@ cite {
 }
 
 #media audio {
-  width: 80%;
+  width: 100%;
   outline: none;
   border-radius: 6px;
 }
 
 #media video {
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   border-radius: 6px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
@@ -643,7 +663,7 @@ cite {
 #media canvas {
   border: 1px solid #ccc;
   background-color: #eee;
-  border-radius: 6px;
+  border-radius: 3px;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -660,7 +680,7 @@ cite {
 
 #media figcaption {
   margin-top: 8px;
-  color: #eee;
+  color: var(--text-secondary);
   font-size: 0.95em;
 }
 
@@ -675,16 +695,16 @@ cite {
 }
 
 #monthly-data {
-  background-color: darkslateblue;
+  background-color: var(--bg);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   padding: 20px;
-  color: #333;
+  color: var(--text);
 }
 
 #monthly-data h2,
 #monthly-data h3 {
-  color: #eee;
+  color: var(--text);
   margin-bottom: 10px;
   text-align: center;
 }
@@ -715,7 +735,7 @@ cite {
 
 #monthly-data th {
   background-color: #ddd;
-  color: #222;
+  color: var(--text);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -741,7 +761,7 @@ cite {
 }
 
 #monthly-data meter::-webkit-meter-optimum-value {
-  background: linear-gradient(90deg, #00b894, #0984e3);
+  background: linear-gradient(90deg, #00b84d, #47e309);
   border-radius: 6px;
 }
 
@@ -759,7 +779,7 @@ cite {
 }
 
 #monthly-data progress::-webkit-progress-value {
-  background-color: #00b894;
+  background-color: #20ce1a;
   border-radius: 10px;
 }
 
@@ -767,19 +787,19 @@ cite {
   text-align: justify;
   margin: 10px 0;
   line-height: 1.5;
-  color: #eee;
+  color: var(--text);
 }
 
 #monthly-data small {
   display: block;
   text-align: right;
-  color: #eee;
+  color: var(--text);
   margin-top: 5px;
   font-style: italic;
 }
 
 #contact {
-  background-color: darkslateblue;
+  background-color: var(--bg);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   color: #eee;
   grid-column: 2 / 3;
@@ -788,30 +808,30 @@ cite {
 }
 
 #contact h2 {
-  color: #eee;
+  color: var(--text);
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
 #contact fieldset {
-  background-color: rgb(53, 46, 100);
-  border: none;
+  border: 1px solid var(--bg-dark);
   border-radius: 8px;
   padding: 2rem;
 }
 
 #contact legend {
-  color: #eee;
+  color: var(--text);
   font-style: italic;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #contact label {
-  margin-top: 10px;
-  margin-bottom: 10px;
   font-weight: bold;
+  color: var(--text);
 }
 
 #contact fieldset input,
@@ -819,19 +839,19 @@ cite {
 #contact fieldset select {
   width: 100%;
   padding: 0.75rem;
-  border-radius: 5px;
-  border: none;
-  color: #222;
+  border-radius: 3px;
+  border: 1px solid var(--bg-dark);
+  color: var(--text);
   font-size: 1rem;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 #contact fieldset input:focus,
 #contact fieldset textarea:focus,
 #contact fieldset select:focus {
   outline: none;
-  border-color: lightblue;
+  border-color: var(--text-hover);
   box-shadow: 0 0 5px rgba(173, 216, 230, 0.5);
 }
 
