@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- Define estilos CSS diretamente dentro do documento -->
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 
       * {
-        font-family: "Open Sans";
+        font-family: "Questrial", sans-serif;
       }
     </style>
     <!-- Insere ou referencia scripts JavaScript para funcionalidades da página -->
@@ -78,12 +78,10 @@
                 <!-- <source> define versões alternativas da imagem para diferentes resoluções -->
                 <source
                   media="(min-width: 800px)"
-                  srcset="
-                    https://placehold.co/1200x500/003366/FFFFFF?text=Slide+1
-                  "
+                  srcset="img/banner/Banner01-Desktop.png"
                 />
                 <img
-                  src="https://placehold.co/800x500/003366/FFFFFF?text=Slide+1"
+                  src="img/banner/Banner01-Mobile.png"
                   alt="Banner promocional 1"
                 />
               </picture>
@@ -97,12 +95,10 @@
               <picture>
                 <source
                   media="(min-width: 800px)"
-                  srcset="
-                    https://placehold.co/1200x500/990033/FFFFFF?text=Slide+2
-                  "
+                  srcset="img/banner/Banner02-Desktop.png"
                 />
                 <img
-                  src="https://placehold.co/800x500/990033/FFFFFF?text=Slide+2"
+                  src="img/banner/Banner02-Mobile.png"
                   alt="Banner promocional 2"
                 />
               </picture>
@@ -116,12 +112,10 @@
               <picture>
                 <source
                   media="(min-width: 800px)"
-                  srcset="
-                    https://placehold.co/1200x500/339900/FFFFFF?text=Slide+3
-                  "
+                  srcset="img/banner/Banner03-Desktop.png"
                 />
                 <img
-                  src="https://placehold.co/800x500/339900/FFFFFF?text=Slide+3"
+                  src="img/banner/Banner03-Mobile.png"
                   alt="Banner promocional 3"
                 />
               </picture>
@@ -135,12 +129,10 @@
               <picture>
                 <source
                   media="(min-width: 800px)"
-                  srcset="
-                    https://placehold.co/1200x500/663399/FFFFFF?text=Slide+4
-                  "
+                  srcset="img/banner/Banner04-Desktop.png"
                 />
                 <img
-                  src="https://placehold.co/800x500/663399/FFFFFF?text=Slide+4"
+                  src="img/banner/Banner04-Mobile.png"
                   alt="Banner promocional 4"
                 />
               </picture>
@@ -203,7 +195,12 @@
       <section id="products" aria-labelledby="products-title">
         <h2 id="products-title">Ofertas Especiais</h2>
         <!-- <form> cria um formulário para envio de dados, usado aqui para filtrar produtos (apenas visual) -->
-        <form id="product-filter" aria-label="Filtro de produtos">
+        <form
+          id="product-filter"
+          aria-label="Filtro de produtos"
+          method="get"
+          action="#"
+        >
           <!-- <select> cria um campo de seleção com múltiplas opções -->
           <select id="categoria" name="categoria">
             <!-- <option> define cada opção dentro do select -->
@@ -222,10 +219,7 @@
           <article class="product-card">
             <!-- <figure> agrupa uma mídia e sua legenda -->
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod01.jpg" alt="Imagem do produto" />
               <!-- <figcaption> fornece uma legenda para a mídia dentro do figure -->
               <figcaption>Smartphone PD One</figcaption>
             </figure>
@@ -257,10 +251,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod02.jpg" alt="Imagem do produto" />
               <figcaption>Fone Bluetooth PD Sound</figcaption>
             </figure>
             <h3>Fone Bluetooth PD Sound</h3>
@@ -285,13 +276,10 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod03.jpg" alt="Imagem do produto" />
               <figcaption>Notebook Pro X 512GB</figcaption>
             </figure>
-            <h3>Notebook Pro X+ 512GB</h3>
+            <h3>Notebook Pro X Plus 512GB</h3>
             <p>
               <strong>R$ 4.899,00</strong>
               <small>R$ 5.999,00</small>
@@ -313,10 +301,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod04.jpg" alt="Imagem do produto" />
               <figcaption>Smart TV 4K 55 Polegadas</figcaption>
             </figure>
             <h3>Smart TV 4K 55 Polegadas</h3>
@@ -341,13 +326,10 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
-              <figcaption>Cafeteira Expressa Auto</figcaption>
+              <img src="img/products/prod05.jpg" alt="Imagem do produto" />
+              <figcaption>Cafeteira Expressa Automática</figcaption>
             </figure>
-            <h3>Cafeteira Expressa Auto</h3>
+            <h3>Cafeteira Expressa Automática</h3>
             <p>
               <strong>R$ 499,90</strong>
               <small>R$ 699,90</small>
@@ -369,10 +351,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod06.jpg" alt="Imagem do produto" />
               <figcaption>Mouse Gamer RGB 16000DPI</figcaption>
             </figure>
             <h3>Mouse Gamer RGB 16000DPI</h3>
@@ -397,10 +376,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod07.jpg" alt="Imagem do produto" />
               <figcaption>Cadeira Gamer Ergonômica</figcaption>
             </figure>
             <h3>Cadeira Gamer Ergonômica</h3>
@@ -425,10 +401,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod08.jpg" alt="Imagem do produto" />
               <figcaption>Air Fryer 5 Litros</figcaption>
             </figure>
             <h3>Air Fryer "Sensação" 5 Litros</h3>
@@ -453,10 +426,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod09.jpg" alt="Imagem do produto" />
               <figcaption>Smartwatch PD Fit V2</figcaption>
             </figure>
             <h3>Smartwatch PD Fitness V2</h3>
@@ -481,10 +451,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod10.jpg" alt="Imagem do produto" />
               <figcaption>Tablet 10.1 Polegadas 64GB</figcaption>
             </figure>
             <h3>Tablet 10.1 Polegadas 64GB</h3>
@@ -509,10 +476,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod11.jpg" alt="Imagem do produto" />
               <figcaption>Teclado Mecânico Sem Fio</figcaption>
             </figure>
             <h3>Teclado Mecânico Sem Fio</h3>
@@ -537,10 +501,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod12.jpg" alt="Imagem do produto" />
               <figcaption>Liquidificador Power 1000W</figcaption>
             </figure>
             <h3>Liquidificador Power 1000W</h3>
@@ -565,10 +526,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod13.jpg" alt="Imagem do produto" />
               <figcaption>Headset Pro 7.1 Surround</figcaption>
             </figure>
             <h3>Headset Pro 7.1 Surround</h3>
@@ -593,10 +551,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod14.jpg" alt="Imagem do produto" />
               <figcaption>Monitor Ultrawide 29 Polegadas</figcaption>
             </figure>
             <h3>Monitor Ultrawide 29 Polegadas</h3>
@@ -621,10 +576,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod15.jpg" alt="Imagem do produto" />
               <figcaption>Caixa de Som Bluetooth 50W</figcaption>
             </figure>
             <h3>Caixa de Som Bluetooth 50W</h3>
@@ -649,13 +601,10 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
-              <figcaption>Batedeira Planetária 700W</figcaption>
+              <img src="img/products/prod16.jpg" alt="Imagem do produto" />
+              <figcaption>Batedeira Planet 700W</figcaption>
             </figure>
-            <h3>Batedeira Planetária 700W</h3>
+            <h3>Batedeira Planet 700W</h3>
             <p>
               <strong>R$ 599,00</strong>
               <small>R$ 849,00</small>
@@ -677,10 +626,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod17.jpg" alt="Imagem do produto" />
               <figcaption>HD Externo 2TB USB 3.0</figcaption>
             </figure>
             <h3>HD Externo 2TB USB 3.0</h3>
@@ -705,10 +651,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod18.jpg" alt="Imagem do produto" />
               <figcaption>Câmera DSLR Pro 24MP</figcaption>
             </figure>
             <h3>Câmera DSLR Pro 24MP</h3>
@@ -733,13 +676,10 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
-              <figcaption>Roteador Mesh Wifi 6</figcaption>
+              <img src="img/products/prod19.jpg" alt="Imagem do produto" />
+              <figcaption>Roteador MeshLinked Wifi 6</figcaption>
             </figure>
-            <h3>Roteador MeshLink Wifi 6</h3>
+            <h3>Roteador MeshLinked Wifi 6</h3>
             <p>
               <strong>R$ 899,00</strong>
               <small>R$ 1.299,00</small>
@@ -761,10 +701,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod20.jpg" alt="Imagem do produto" />
               <figcaption>Aspirador de Pó Robô</figcaption>
             </figure>
             <h3>Aspirador de Pó Robótico</h3>
@@ -789,10 +726,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod21.jpg" alt="Imagem do produto" />
               <figcaption>Micro-ondas 30L Espelhado</figcaption>
             </figure>
             <h3>Micro-ondas 30L Espelhado</h3>
@@ -817,13 +751,10 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
-              <figcaption>Webcam 4K Pro</figcaption>
+              <img src="img/products/prod22.jpg" alt="Imagem do produto" />
+              <figcaption>Webcam 4K Pro Plus</figcaption>
             </figure>
-            <h3>Webcam 4K 60fps Pro+</h3>
+            <h3>Webcam 4K 60fps Pro Plus</h3>
             <p>
               <strong>R$ 749,00</strong>
               <small>R$ 1.099,00</small>
@@ -845,10 +776,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod23.jpg" alt="Imagem do produto" />
               <figcaption>Carregador Portátil 20000mAh</figcaption>
             </figure>
             <h3>Carregador Portátil 20000mAh</h3>
@@ -873,10 +801,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod24.jpg" alt="Imagem do produto" />
               <figcaption>Soundbar 2.1 120W</figcaption>
             </figure>
             <h3>Soundbar PD Sound 2.1 120W</h3>
@@ -901,13 +826,10 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
-              <figcaption>Impressora Multi Tanque</figcaption>
+              <img src="img/products/prod25.jpg" alt="Imagem do produto" />
+              <figcaption>Impressora PD Multi Tanque</figcaption>
             </figure>
-            <h3>Impressora Multi Tanque</h3>
+            <h3>Impressora PD Multi Tanque</h3>
             <p>
               <strong>R$ 1.099,00</strong>
               <small>R$ 1.499,00</small>
@@ -929,10 +851,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod26.jpg" alt="Imagem do produto" />
               <figcaption>Panela de Pressão Elétrica</figcaption>
             </figure>
             <h3>Panela de Pressão Elétrica</h3>
@@ -957,10 +876,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod27.jpg" alt="Imagem do produto" />
               <figcaption>Fone TWS com Noise Cancel</figcaption>
             </figure>
             <h3>Fone TWS com Noise Cancel</h3>
@@ -985,10 +901,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod28.jpg" alt="Imagem do produto" />
               <figcaption>Projetor Full HD 3000 Lúmens</figcaption>
             </figure>
             <h3>Projetor Full HD 3000 Lúmens</h3>
@@ -1013,10 +926,7 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
+              <img src="img/products/prod29.jpg" alt="Imagem do produto" />
               <figcaption>SSD 1TB NVMe Gen4</figcaption>
             </figure>
             <h3>SSD 1TeraByte NVMe Gen4</h3>
@@ -1041,13 +951,10 @@
 
           <article class="product-card">
             <figure>
-              <img
-                src="https://placehold.co/600x400/eeeeee/aaaaaa?text=Produto"
-                alt="Imagem do produto"
-              />
-              <figcaption>Luminária Smart RGB</figcaption>
+              <img src="img/products/prod30.jpg" alt="Imagem do produto" />
+              <figcaption>Luminária PDLight Smart RGB</figcaption>
             </figure>
-            <h3>Luminária PD Smart RGB</h3>
+            <h3>Luminária PDLight Smart RGB</h3>
             <p>
               <strong>R$ 229,90</strong>
               <small>R$ 349,90</small>
@@ -1335,7 +1242,7 @@
           </figure>
           <!-- <embed> incorpora conteúdo externo diretamente na página -->
           <embed
-            src="https://www.youtube.com/embed/KwFrvsnxPW0"
+            src="https://www.youtube.com/embed/xH7XOgeR5E8"
             width="480"
             height="270"
             title="Vídeo externo incorporado"
@@ -1412,7 +1319,7 @@
 
         <h3>Tendência de Crescimento</h3>
 
-        <p style="color: #eee">
+        <p>
           Estamos em constante expansão! Nosso volume de vendas e satisfação dos
           clientes tem apresentado crescimento contínuo, demonstrando a
           confiança do público na <strong>PD Market</strong>.
@@ -1485,9 +1392,44 @@
               required
             ></textarea>
 
-            <button type="submit">Enviar Mensagem</button>
+            <label
+              for="contact-modal-toggle"
+              class="open-modal"
+              role="button"
+              style="color: #fafafa"
+              >Enviar Mensagem</label
+            >
           </fieldset>
         </form>
+        <input
+          type="checkbox"
+          id="contact-modal-toggle"
+          class="modal-toggle"
+          hidden
+        />
+
+        <div
+          class="modal"
+          id="contact-modal"
+          role="dialog"
+          aria-labelledby="contact-modal-title"
+        >
+          <label for="contact-modal-toggle" class="overlay"></label>
+
+          <div class="modal-content">
+            <h3 id="contact-modal-title">Mensagem Enviada</h3>
+            <hr />
+            <p>Obrigado! Sua mensagem foi enviada com sucesso.</p>
+
+            <label
+              for="contact-modal-toggle"
+              class="modal-close-button"
+              role="button"
+              style="color: #fafafa"
+              >Fechar</label
+            >
+          </div>
+        </div>
       </section>
       <!--
         <aside> representa conteúdo complementar ao conteúdo principal. Aqui está sendo usado para mostrar informações extras relacionadas ao PD Market.
